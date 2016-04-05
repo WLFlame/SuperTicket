@@ -1,0 +1,32 @@
+PODS:
+  - AVOSCloud (3.2.7)
+  - AVOSCloudCrashReporting (3.2.7):
+    - AVOSCloud
+  - AVOSCloudIM (3.2.7):
+    - AVOSCloud
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - NVActivityIndicatorView (2.3)
+  - RAMAnimatedTabBarController (1.2.2)
+  - SnapKit (0.20.0)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudCrashReporting
+  - AVOSCloudIM
+  - ChameleonFramework/Swift
+  - NVActivityIndicatorView
+  - RAMAnimatedTabBarController (~> 1.2.2)
+  - SnapKit (~> 0.20.0)
+
+SPEC CHECKSUMS:
+  AVOSCloud: 957d1508104d7c8ed501df9d9b734d7a98c2e047
+  AVOSCloudCrashReporting: 68b4c9096c5f465f1cbda4a1d7ea5f04efa930ab
+  AVOSCloudIM: ec08eaec4d27d732e3be93eadeb3bcf1355b5dcf
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  NVActivityIndicatorView: c7ef25ef527ab5e51b00322cb1ddd58681bcf2a3
+  RAMAnimatedTabBarController: cadbef3162bc7ae86091661273ccec503deb3398
+  SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
+
+COCOAPODS: 0.39.0
