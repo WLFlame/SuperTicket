@@ -34,12 +34,12 @@ typedef NS_ENUM(NSUInteger, ARDynamicSizeCaculateType) {
 
 @implementation UICollectionView (ARDynamicCacheHeightLayoutCell)
 
-+ (void)load {
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    [self swizzlingMethods];
-  });
-}
+//+ (void)load {
+//  static dispatch_once_t onceToken;
+//  dispatch_once(&onceToken, ^{
+//    [self swizzlingMethods];
+//  });
+//}
 
 + (void)swizzlingMethods {
   SEL selectors[] = {

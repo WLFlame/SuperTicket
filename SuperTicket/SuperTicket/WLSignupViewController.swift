@@ -14,12 +14,21 @@ class WLSignupViewController: UIViewController {
     @IBOutlet weak var lbTime: UILabel!
     @IBOutlet weak var lbSubTime: UILabel!
     @IBOutlet weak var activityChoicePicker: UIPickerView!
+    var timer: NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI();
     }
     
+    private func setupUI() {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(WLSignupViewController.timeStart), userInfo: nil, repeats: true)
+        lbTime.text = NSDate().stringWithFormat("hh:mm ss")
+    }
     
+    func timeStart() {
+        lbTime.text = NSDate().stringWithFormat("hh:mm ss")
+    }
     
 }
 

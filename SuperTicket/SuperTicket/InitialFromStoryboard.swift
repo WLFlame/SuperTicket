@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol InitialFromStoryboard : class {
     static func createFromStoryBoard(storeId: String, vcStroreId: String) -> UIViewController
 }
@@ -17,3 +18,4 @@ extension UIViewController : InitialFromStoryboard {
         return UIStoryboard(name: storeId, bundle: nil).instantiateViewControllerWithIdentifier(vcStroreId) 
     }
 }
+

@@ -34,6 +34,10 @@ class WLAlert {
         alert(title: "抱歉", message: message, dismissTitle: "确定", inViewController: viewController, withDismissAction: nil)
     }
     
+    class func alertOk(message message: String?, inViewController viewController: UIViewController?) {
+        alert(title: "提示", message: message, dismissTitle: "确定", inViewController: viewController, withDismissAction: nil)
+    }
+    
     class func textInput(title title: String, placeholder: String?, oldText: String?, dismissTitle: String, inViewController viewController: UIViewController?, withFinishedAction finishedAction: ((text: String) -> Void)?) {
         
         dispatch_async(dispatch_get_main_queue()) {

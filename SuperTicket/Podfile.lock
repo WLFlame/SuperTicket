@@ -7,6 +7,8 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - DZNEmptyDataSet (1.7.3)
+  - ImagePicker (1.2)
   - NVActivityIndicatorView (2.3)
   - RAMAnimatedTabBarController (1.2.2)
   - SnapKit (0.20.0)
@@ -16,6 +18,8 @@ DEPENDENCIES:
   - AVOSCloudCrashReporting
   - AVOSCloudIM
   - ChameleonFramework/Swift
+  - DZNEmptyDataSet
+  - ImagePicker
   - NVActivityIndicatorView
   - RAMAnimatedTabBarController (~> 1.2.2)
   - SnapKit (~> 0.20.0)
@@ -25,6 +29,8 @@ SPEC CHECKSUMS:
   AVOSCloudCrashReporting: 68b4c9096c5f465f1cbda4a1d7ea5f04efa930ab
   AVOSCloudIM: ec08eaec4d27d732e3be93eadeb3bcf1355b5dcf
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
+  ImagePicker: 85f14ed6872f46c08d210077b5540a890a6cd151
   NVActivityIndicatorView: c7ef25ef527ab5e51b00322cb1ddd58681bcf2a3
   RAMAnimatedTabBarController: cadbef3162bc7ae86091661273ccec503deb3398
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650

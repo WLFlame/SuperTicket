@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         thridpartyConfiguration(launchOptions)
         window = UIWindow(frame: CGRect(origin: CGPointZero, size: UIScreen.size()))
         window?.makeKeyAndVisible()
-        if WLUserDefaults.isLogined {
-            
+        if AVUser.currentUser() != nil {
+            WLLinkUtil.sharedInstance.linkToMainVc()
         } else {
             WLLinkUtil.sharedInstance.linkToLoginVc(.None)
         }
@@ -35,12 +35,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
-    func thridpartyConfiguration(launchOptions: [NSObject: AnyObject]?) {
+    private func thridpartyConfiguration(launchOptions: [NSObject: AnyObject]?) {
+        
+        func registerSubclass() {
+            Company.registerSubclass()
+            
+        }
+        registerSubclass()
+        
         AVOSCloud.setApplicationId(WLConfig.LeanCloudKey.appId, clientKey: WLConfig.LeanCloudKey.clientKey)
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
     }
     
-    func globalAppearnce() {
+    private func globalAppearnce() {
 //        Chameleon.setGlobalThemeUsingPrimaryColor(FlatBlue(),
 //                                                  withSecondaryColor: FlatBlue(),
 //                                                  andContentStyle: UIContentStyle.Light)

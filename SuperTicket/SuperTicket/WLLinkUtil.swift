@@ -7,13 +7,17 @@
 //
 
 import Foundation
-
+import ImagePicker
 enum ShowStyle {
     case Push, Modal, None
 }
 
 class WLLinkUtil {
     static let sharedInstance = WLLinkUtil()
+    
+    var tabVc: WLTabbarController?
+    
+    var imagePicker: ImagePickerController?
     
     func linkToLoginVc(style: ShowStyle) {
         switch style {
@@ -29,4 +33,42 @@ class WLLinkUtil {
     func linkToLoginVc(attributes: [String : AnyObject]) {
         
     }
+    
+    func linkToMainVc() {
+        let tabvc = WLTabbarController.createFromStoryBoard("Main", vcStroreId: "WLTabbarController") as? WLTabbarController
+        self.tabVc = tabvc
+        UIApplication.sharedApplication().keyWindow?.rootViewController = tabvc
+    }
+    
+    func linkToCreateOrUpdateCompanyVc(send: UIViewController) {
+        linkToCreateOrUpdateCompanyVc(send, company: nil)
+    }
+    
+    func linkToCreateOrUpdateCompanyVc(send: UIViewController, company: Company?) {
+        let vc = CreateCompanyViewController.createFromStoryBoard("Activity", vcStroreId: "CreateCompanyViewController") as! CreateCompanyViewController
+        if let company = company {
+            vc.company = company
+            vc.title = "添加单位信息"
+        } else {
+            vc.title = "修改单位信息"
+        }
+        send.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func linkToChoseAvatarVc(send: ImagePickerDelegate) {
+        let imagePickerController = ImagePickerController()
+        self.imagePicker = imagePickerController
+        imagePickerController.delegate = send
+        imagePickerController.imageLimit = 1
+        (send as? UIViewController)!.presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func dismissAvatarVc() {
+        if let imagePicker = imagePicker {
+            imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
 }
+
+

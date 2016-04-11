@@ -134,7 +134,7 @@ class WLUserDefaults {
     static var v1AccessToken: Listenable<String?> = {
         let v1AccessToken = defaults.stringForKey(v1AccessTokenKey)
         return Listenable<String?>(v1AccessToken) {_ in 
-            
+             defaults.setObject(userID.value, forKey: v1AccessTokenKey)
         }
     }()
     

@@ -6,10 +6,10 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Animated Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="IL4-14-BXJ">
             <objects>
-                <tabBarController id="Jp4-hM-I2A" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="WLTabbarController" id="Jp4-hM-I2A" customClass="WLTabbarController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="xeO-rF-C52">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -25,41 +25,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBu-yx-CgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-810" y="-424"/>
-        </scene>
-        <!--活动-->
-        <scene sceneID="fUm-yq-bad">
-            <objects>
-                <viewController id="P9Z-oJ-eID" customClass="WLActivityViewController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GY2-ZI-dUE"/>
-                        <viewControllerLayoutGuide type="bottom" id="ziQ-fG-mGR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g6Q-Ci-Uf2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GMT-bx-ULE">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="P9Z-oJ-eID" id="RDd-fS-Oua"/>
-                                    <outlet property="delegate" destination="P9Z-oJ-eID" id="rQN-2Y-Gzz"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GMT-bx-ULE" secondAttribute="trailing" id="JnP-Ek-Zl0"/>
-                            <constraint firstItem="GMT-bx-ULE" firstAttribute="leading" secondItem="g6Q-Ci-Uf2" secondAttribute="leading" id="SCR-Nf-SMD"/>
-                            <constraint firstItem="ziQ-fG-mGR" firstAttribute="top" secondItem="GMT-bx-ULE" secondAttribute="bottom" id="cKR-FQ-G71"/>
-                            <constraint firstItem="GMT-bx-ULE" firstAttribute="top" secondItem="GY2-ZI-dUE" secondAttribute="bottom" id="dSZ-zF-DyQ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="活动" id="0m8-rE-pSw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tk6-nc-MPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="795" y="-818"/>
         </scene>
         <!--签到-->
         <scene sceneID="aQu-Yj-PXa">
@@ -132,7 +97,10 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:06 43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQZ-2d-UoS">
-                                <rect key="frame" x="265" y="72" width="69" height="20.5"/>
+                                <rect key="frame" x="264.5" y="72" width="70" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="WAo-fd-jIp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -176,6 +144,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bu6-4W-bqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795" y="-1568"/>
+        </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="vLC-AS-bY2">
+            <objects>
+                <tableViewController id="7cb-9U-igP" customClass="WLActivityViewController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zw6-Mh-llP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dB3-d8-73y">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dB3-d8-73y" id="CMt-E5-Dyb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7cb-9U-igP" id="09B-Af-zVh"/>
+                            <outlet property="delegate" destination="7cb-9U-igP" id="QCc-g7-5Di"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="TBr-ox-ZcQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZu-6j-rld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-828"/>
         </scene>
         <!--报表-->
         <scene sceneID="6MF-t7-MJk">
@@ -548,7 +545,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="elM-5j-V1T">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="elM-5j-V1T">
                                                 <rect key="frame" x="66" y="0.0" width="534" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -579,10 +576,10 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入密码(6-16位)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-Yg-CMk">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-Yg-CMk">
                                                 <rect key="frame" x="66" y="0.0" width="534" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -610,6 +607,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnClickLogin:" destination="dG0-UV-eQl" eventType="touchUpInside" id="x0r-GR-fHh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -658,6 +658,10 @@
                             <constraint firstItem="Ajt-fT-8VF" firstAttribute="top" secondItem="bIU-rB-rrt" secondAttribute="bottom" constant="100" id="x9N-jm-MNB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fielPwd" destination="DdT-Yg-CMk" id="fFn-wn-tpe"/>
+                        <outlet property="fieldTel" destination="elM-5j-V1T" id="Gq1-Fm-HP6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ym8-ZP-LbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -824,10 +828,10 @@
             </objects>
             <point key="canvasLocation" x="-1358" y="-2521"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="nK1-7C-nT7">
             <objects>
-                <viewController id="dD9-py-ZrJ" sceneMemberID="viewController">
+                <viewController id="dD9-py-ZrJ" customClass="QZRegisterViewController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eqV-yg-x7j"/>
                         <viewControllerLayoutGuide type="bottom" id="Qh2-rV-30w"/>
@@ -885,17 +889,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaC-1Z-eaX" customClass="WLBottomLineView" customModule="SuperTicket" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="294" width="600" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sn-Vb-df3">
-                                        <rect key="frame" x="15" y="14" width="52" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入个人描述" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6u4-FO-fBq">
                                         <rect key="frame" x="97" y="0.0" width="488" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sn-Vb-df3">
+                                        <rect key="frame" x="41" y="14" width="26" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -922,6 +926,9 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnClickSure:" destination="dD9-py-ZrJ" eventType="touchUpInside" id="AN2-KL-DFr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -939,6 +946,11 @@
                             <constraint firstItem="xcz-VY-s1t" firstAttribute="leading" secondItem="ZCW-lT-gse" secondAttribute="leading" id="qxt-f2-WwJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fieldNickName" destination="GYy-aC-bcE" id="yWb-ee-HO9"/>
+                        <outlet property="fieldSelfIntro" destination="6u4-FO-fBq" id="GfM-xL-IWN"/>
+                        <outlet property="imgAvatarView" destination="IL0-jb-uhL" id="EXh-ee-p7R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xln-5L-9qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -947,7 +959,7 @@
         <!--签到-->
         <scene sceneID="2n1-a3-zK3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZHh-Ir-k4Q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZHh-Ir-k4Q" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="签到" image="icon_contact" selectedImage="icon_contact_active" id="Dyl-qd-rbV" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="FJW-5g-8mV" id="5Wv-33-5PA"/>
@@ -971,7 +983,7 @@
         <!--活动-->
         <scene sceneID="ObR-TS-3fY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EMD-mE-oDc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EMD-mE-oDc" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="活动" image="icon_contact" selectedImage="icon_contact_active" id="C9I-pV-JN1" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="1PJ-kg-zHR" id="B9G-1U-hqQ"/>
@@ -984,7 +996,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="P9Z-oJ-eID" kind="relationship" relationship="rootViewController" id="Z32-Sd-wca"/>
+                        <segue destination="7cb-9U-igP" kind="relationship" relationship="rootViewController" id="O5K-B0-lAu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Nz-6W-jAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -995,7 +1007,7 @@
         <!--报表-->
         <scene sceneID="hv3-og-ans">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EuB-KG-mee" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EuB-KG-mee" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="报表" image="icon_contact" selectedImage="icon_contact_active" id="Ci2-Mf-o68" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="OHP-hl-jnu" id="IGw-rd-7Ga"/>
@@ -1019,7 +1031,7 @@
         <!--我-->
         <scene sceneID="ggV-Ot-toi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3A-Dx-eSe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3A-Dx-eSe" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="icon_contact" selectedImage="icon_contact_active" id="zGc-Ir-6tA" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="g2P-o2-atj" id="y7w-S3-7OJ"/>

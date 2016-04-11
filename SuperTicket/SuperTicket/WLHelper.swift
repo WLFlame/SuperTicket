@@ -44,11 +44,25 @@ func cancel(cancelableTask: CancelableTask?) {
     cancelableTask?(cancel: true)
 }
 
+func asyncInMain(block: dispatch_block_t) {
+    block()
+}
+
 func unregisterThirdPartyPush() {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
         
     })
 }
+
+func bindFields(fields: UITextField...) -> Bool {
+    for field in fields {
+        if !field.check() {
+            return false
+        }
+    }
+    return true
+}
+
 /**
 清空缓存
  */
@@ -95,6 +109,11 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         return image
+    }
+    
+    class func resizeAvatarImage(avatar: UIImage) -> UIImage {
+        return avatar.resizedImage(CGSize(width: 300, height: 300), interpolationQuality: .Medium)
+        
     }
 }
 

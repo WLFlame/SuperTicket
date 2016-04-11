@@ -39,8 +39,15 @@ extension WLConfig {
         static let appId = "rQQyTd1oV8uQXaBLHFElufJ1-gzGzoHsz"
         static let clientKey = "FYQwJetEyNcvhprE2sbvY0ac"
     }
+}
+
+extension UIFont {
+    class func rightItemFont() -> UIFont {
+        return UIFont.systemFontOfSize(15)
+    }
 
 }
+
 
 extension UIColor {
     class func hairLineColor() -> UIColor {
@@ -49,5 +56,9 @@ extension UIColor {
     
     class func themeColor() -> UIColor {
         return UIColor(hexString: "#9DA9FF")
+    }
+    
+    class func rightItemTitleColor() -> UIColor {
+        return UIColor.whiteColor()
     }
 }

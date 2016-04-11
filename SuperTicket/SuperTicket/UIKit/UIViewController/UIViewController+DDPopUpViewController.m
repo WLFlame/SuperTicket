@@ -172,13 +172,13 @@ static NSMutableArray *__popUpViewControllers = nil;
 
 #pragma mark - private methods
 
-+ (void)load
-{
-    __popUpViewControllers = [[NSMutableArray alloc] init];
-    Method original = class_getInstanceMethod([UIViewController class], NSSelectorFromString(@"dealloc"));
-    Method swizzle = class_getInstanceMethod([UIViewController class], @selector(sizzled_dealloc));
-    method_exchangeImplementations(original, swizzle);
-}
+//+ (void)load
+//{
+//    __popUpViewControllers = [[NSMutableArray alloc] init];
+//    Method original = class_getInstanceMethod([UIViewController class], NSSelectorFromString(@"dealloc"));
+//    Method swizzle = class_getInstanceMethod([UIViewController class], @selector(sizzled_dealloc));
+//    method_exchangeImplementations(original, swizzle);
+//}
 
 - (void)sizzled_dealloc
 {

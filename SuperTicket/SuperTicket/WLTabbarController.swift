@@ -7,7 +7,8 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
-class WLTabbarController: UITabBarController {
-
+class WLTabbarController: RAMAnimatedTabBarController {
+    
 }

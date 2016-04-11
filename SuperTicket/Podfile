@@ -11,5 +11,7 @@ pod 'AVOSCloud'
 pod 'AVOSCloudIM'
 pod 'AVOSCloudCrashReporting'
 pod 'NVActivityIndicatorView'
+pod 'DZNEmptyDataSet'
+pod 'ImagePicker'
 end
 

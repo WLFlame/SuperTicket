@@ -22,7 +22,8 @@ class WLSendVerifyCodeControlelr: UIViewController {
     
     // 发送验证码
     private func sendVerify() -> Bool{
-        guard let tel = fieldTel.text else {
+        let tel = fieldTel.text!;
+        if tel.isEmpty {
             WLAlert.alertSorry(message: "请输入手机号", inViewController: self)
             return false
         }
@@ -47,20 +48,20 @@ class WLSendVerifyCodeControlelr: UIViewController {
     }
 
     @IBAction func nextStep(sender: AnyObject) {
-        guard let tel = fieldTel.text else {
-            WLAlert.alertSorry(message: "请输入手机号", inViewController: self)
-            return
-        }
-        guard let verifyCode = fieldVerifyCode.text else {
-            WLAlert.alertSorry(message: "请输入验证码", inViewController: self)
-            return
-        }
-        
-        AVOSCloud.verifySmsCode(verifyCode, mobilePhoneNumber: tel) { [weak self] (succeed, error) in
-            if succeed {
-                self?.performSegueWithIdentifier("segue_register", sender: nil)
-            }
-        }
+//        if fieldTel.text!.isEmpty {
+//            WLAlert.alertSorry(message: "请输入手机号", inViewController: self)
+//            return
+//        }
+//        if fieldVerifyCode.text!.isEmpty {
+//            WLAlert.alertSorry(message: "请输入验证码", inViewController: self)
+//            return
+//        }
+//        
+//        AVOSCloud.verifySmsCode(fieldVerifyCode.text!, mobilePhoneNumber: fieldTel.text!) { [weak self] (succeed, error) in
+//            if succeed {
+                self.performSegueWithIdentifier("segue_register", sender: nil)
+//            }
+//        }
     }
     
 }
