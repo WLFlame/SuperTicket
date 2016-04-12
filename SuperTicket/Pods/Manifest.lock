@@ -11,7 +11,6 @@ PODS:
   - ImagePicker (1.2)
   - Kingfisher (2.2.0)
   - NVActivityIndicatorView (2.3)
-  - RAMAnimatedTabBarController (1.2.2)
   - SnapKit (0.20.0)
 
 DEPENDENCIES:
@@ -23,7 +22,6 @@ DEPENDENCIES:
   - ImagePicker
   - Kingfisher (~> 2.2)
   - NVActivityIndicatorView
-  - RAMAnimatedTabBarController (~> 1.2.2)
   - SnapKit (~> 0.20.0)
 
 SPEC CHECKSUMS:
@@ -35,7 +33,6 @@ SPEC CHECKSUMS:
   ImagePicker: 85f14ed6872f46c08d210077b5540a890a6cd151
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
   NVActivityIndicatorView: c7ef25ef527ab5e51b00322cb1ddd58681bcf2a3
-  RAMAnimatedTabBarController: cadbef3162bc7ae86091661273ccec503deb3398
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
 
 COCOAPODS: 0.39.0

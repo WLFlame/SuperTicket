@@ -34,13 +34,22 @@ class WLActivityViewController: UITableViewController {
             return
         }
         let company = obj[k_Company] as! Company
-        if obj[k_NotificationChangeType]! as! String == WLConfig.NotificationChangeType.Update.rawValue {
+        
+        
+        switch obj[k_NotificationChangeType]! as! String {
+        case WLConfig.NotificationChangeType.Update.rawValue:
             companies.removeAtIndex(companies.indexOf(company)!)
             companies.append(company)
             tableView.reloadData()
-        } else {
+        case WLConfig.NotificationChangeType.Add.rawValue:
             companies.insert(company, atIndex: 0)
             tableView.reloadData()
+        case WLConfig.NotificationChangeType.Remove.rawValue:
+            companies.removeAtIndex(companies.indexOf(company)!)
+            tableView.reloadData()
+            
+        default:
+            break
         }
        
     }

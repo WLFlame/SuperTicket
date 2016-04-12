@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             WLLinkUtil.sharedInstance.linkToLoginVc(.None)
         }
         
-      
+        
         
         return true
     }
@@ -39,7 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         func registerSubclass() {
             Company.registerSubclass()
-            
+            SignInConfigure.registerSubclass()
+            SignInTimeSection.registerSubclass()
+            Activity.registerSubclass()
         }
         registerSubclass()
         
@@ -98,7 +100,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = UIColor.whiteColor()
         //UITabBar.appearance().translucent = false]
         UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.flatBlueColor()], forState: .Selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.flatGrayColor()], forState: .Normal)
     }
 
     func applicationWillResignActive(application: UIApplication) {

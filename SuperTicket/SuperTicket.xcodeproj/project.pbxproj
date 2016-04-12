@@ -269,6 +269,11 @@
 		D2A344D31CBC157B0052F3A6 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344BE1CBC157B0052F3A6 /* UIScrollView+MJExtension.m */; };
 		D2A344D41CBC157B0052F3A6 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344C01CBC157B0052F3A6 /* UIScrollView+MJRefresh.m */; };
 		D2A344D51CBC157B0052F3A6 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344C21CBC157B0052F3A6 /* UIView+MJExtension.m */; };
+		D2A344D81CBD35560052F3A6 /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344D71CBD35560052F3A6 /* ActivityListViewController.swift */; };
+		D2A344DB1CBD36C40052F3A6 /* ActivityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344DA1CBD36C40052F3A6 /* ActivityListCell.swift */; };
+		D2A344DD1CBD38230052F3A6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344DC1CBD38230052F3A6 /* Activity.swift */; };
+		D2A344E01CBD49590052F3A6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344DF1CBD49590052F3A6 /* ActivityViewController.swift */; };
+		D2A344E41CBD4FEC0052F3A6 /* WifiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344E31CBD4FEC0052F3A6 /* WifiHelper.m */; };
 		D2EDC0471CB10561005A4481 /* WLAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC0461CB10561005A4481 /* WLAlert.swift */; };
 		D2EDC04A1CB107DB005A4481 /* Proposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC0491CB107DB005A4481 /* Proposer.swift */; };
 		D2EDC04C1CB10897005A4481 /* WLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC04B1CB10897005A4481 /* WLUserDefaults.swift */; };
@@ -809,6 +814,13 @@
 		D2A344C01CBC157B0052F3A6 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		D2A344C11CBC157B0052F3A6 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		D2A344C21CBC157B0052F3A6 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		D2A344D71CBD35560052F3A6 /* ActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListViewController.swift; sourceTree = "<group>"; };
+		D2A344DA1CBD36C40052F3A6 /* ActivityListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListCell.swift; sourceTree = "<group>"; };
+		D2A344DC1CBD38230052F3A6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		D2A344DF1CBD49590052F3A6 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		D2A344E21CBD4FEC0052F3A6 /* WifiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiHelper.h; sourceTree = "<group>"; };
+		D2A344E31CBD4FEC0052F3A6 /* WifiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiHelper.m; sourceTree = "<group>"; };
+		D2A344E51CBD50540052F3A6 /* WLSingletonH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSingletonH.h; sourceTree = "<group>"; };
 		D2EDC0461CB10561005A4481 /* WLAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLAlert.swift; sourceTree = "<group>"; };
 		D2EDC0491CB107DB005A4481 /* Proposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposer.swift; sourceTree = "<group>"; };
 		D2EDC04B1CB10897005A4481 /* WLUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLUserDefaults.swift; sourceTree = "<group>"; };
@@ -2056,15 +2068,50 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		D2A344D61CBD353F0052F3A6 /* ActivityListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2A344D71CBD35560052F3A6 /* ActivityListViewController.swift */,
+			);
+			name = ActivityListViewController;
+			sourceTree = "<group>";
+		};
+		D2A344D91CBD369E0052F3A6 /* ActivityListCell */ = {
+			isa = PBXGroup;
+			children = (
+				D2A344DA1CBD36C40052F3A6 /* ActivityListCell.swift */,
+			);
+			name = ActivityListCell;
+			sourceTree = "<group>";
+		};
+		D2A344DE1CBD49410052F3A6 /* ActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2A344DF1CBD49590052F3A6 /* ActivityViewController.swift */,
+			);
+			name = ActivityViewController;
+			sourceTree = "<group>";
+		};
+		D2A344E11CBD4FC50052F3A6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2A344E21CBD4FEC0052F3A6 /* WifiHelper.h */,
+				D2A344E31CBD4FEC0052F3A6 /* WifiHelper.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		D2EDC03C1CB103CA005A4481 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2A344DE1CBD49410052F3A6 /* ActivityViewController */,
+				D2A344D61CBD353F0052F3A6 /* ActivityListViewController */,
 				F6270DC41CBCDBD00086AEE2 /* CompanyDetailViewController */,
 				D2EFD85B1CBAB85C00E531A4 /* CreateCompanyViewController */,
 				D2FB0DDE1CB694070025BF4D /* RegisterViewController */,
 				D206FB581CB291F500B2143F /* SendVerifyCodeControlelr */,
 				D2EDC0931CB160E3005A4481 /* ActivitySetViewController */,
-				D2EDC08E1CB16008005A4481 /* ActivityViewController */,
+				D2EDC08E1CB16008005A4481 /* WLActivityViewController */,
 				D2EDC07F1CB15031005A4481 /* LoginViewController */,
 				D2EDC0631CB13F48005A4481 /* SignupStateController */,
 				D2EDC05E1CB13D8A005A4481 /* ActAssignmentController */,
@@ -2078,6 +2125,7 @@
 		D2EDC03D1CB1041D005A4481 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2A344D91CBD369E0052F3A6 /* ActivityListCell */,
 				D2A3447E1CBBFAB60052F3A6 /* TitleBarButtonItem */,
 				D2EFD8581CBAB4B600E531A4 /* ImageBarButtonItem */,
 				D2FB0E021CB6A8AC0025BF4D /* NoticeTextField */,
@@ -2092,6 +2140,7 @@
 			isa = PBXGroup;
 			children = (
 				D2EFD8521CBAA11400E531A4 /* Company.swift */,
+				D2A344DC1CBD38230052F3A6 /* Activity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -2099,6 +2148,8 @@
 		D2EDC03F1CB104D7005A4481 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D2A344E51CBD50540052F3A6 /* WLSingletonH.h */,
+				D2A344E11CBD4FC50052F3A6 /* Network */,
 				D2EDC0461CB10561005A4481 /* WLAlert.swift */,
 				D2EDC04B1CB10897005A4481 /* WLUserDefaults.swift */,
 				D2EDC04D1CB11259005A4481 /* WLLog.swift */,
@@ -2238,12 +2289,12 @@
 			name = LoginViewController;
 			sourceTree = "<group>";
 		};
-		D2EDC08E1CB16008005A4481 /* ActivityViewController */ = {
+		D2EDC08E1CB16008005A4481 /* WLActivityViewController */ = {
 			isa = PBXGroup;
 			children = (
 				D2EDC08F1CB1602E005A4481 /* WLActivityViewController.swift */,
 			);
-			name = ActivityViewController;
+			name = WLActivityViewController;
 			sourceTree = "<group>";
 		};
 		D2EDC0931CB160E3005A4481 /* ActivitySetViewController */ = {
@@ -2337,6 +2388,7 @@
 				TargetAttributes = {
 					D23D37B81CB0114700CE01B2 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZM357BRHKZ;
 					};
 				};
 			};
@@ -2479,9 +2531,11 @@
 				D206FAFE1CB2764400B2143F /* UIImageView+BetterFace.m in Sources */,
 				D206FA841CB2764400B2143F /* NSDate+Utilities.m in Sources */,
 				D2A344CB1CBC157B0052F3A6 /* MJRefreshBackGifFooter.m in Sources */,
+				D2A344D81CBD35560052F3A6 /* ActivityListViewController.swift in Sources */,
 				D206FB331CB2764400B2143F /* UIView+Genie.m in Sources */,
 				D206FB4F1CB2764400B2143F /* UIWebVIew+SwipeGesture.m in Sources */,
 				D206FAF51CB2764400B2143F /* UIImage+Merge.m in Sources */,
+				D2A344DD1CBD38230052F3A6 /* Activity.swift in Sources */,
 				D2EDC0541CB11B54005A4481 /* WLService.swift in Sources */,
 				D2FB0E041CB6A8C40025BF4D /* QZNoticeTextField.swift in Sources */,
 				D206FAE21CB2764400B2143F /* UIColor+Modify.m in Sources */,
@@ -2522,6 +2576,7 @@
 				D2EDC0471CB10561005A4481 /* WLAlert.swift in Sources */,
 				D206F8501CB272AF00B2143F /* InitialFromStoryboard.swift in Sources */,
 				D206FA9E1CB2764400B2143F /* NSObject+Blocks.m in Sources */,
+				D2A344E41CBD4FEC0052F3A6 /* WifiHelper.m in Sources */,
 				D206FAA81CB2764400B2143F /* NSString+Base64.m in Sources */,
 				D206FB4C1CB2764400B2143F /* UIWebView+Load.m in Sources */,
 				D206FAC81CB2764400B2143F /* CALayer+UIColor.m in Sources */,
@@ -2565,6 +2620,7 @@
 				D2A344801CBBFAD60052F3A6 /* TitleBarButtonItem.swift in Sources */,
 				D206FA861CB2764400B2143F /* NSDateFormatter+Make.m in Sources */,
 				D2EFD8571CBAB39600E531A4 /* UIViewController+EmptySet.swift in Sources */,
+				D2A344E01CBD49590052F3A6 /* ActivityViewController.swift in Sources */,
 				D2A344C51CBC157B0052F3A6 /* MJRefreshComponent.m in Sources */,
 				D206FAFF1CB2764400B2143F /* UIImageView+FaceAwareFill.m in Sources */,
 				D206FB2D1CB2764400B2143F /* UIView+CustomBorder.m in Sources */,
@@ -2573,6 +2629,7 @@
 				D206FAE71CB2764400B2143F /* UIDevice+Hardware.m in Sources */,
 				D206FAE61CB2764400B2143F /* UIControl+Block.m in Sources */,
 				D206FB041CB2764400B2143F /* UILabel+AutoSize.m in Sources */,
+				D2A344DB1CBD36C40052F3A6 /* ActivityListCell.swift in Sources */,
 				D206FAFA1CB2764400B2143F /* UIImage+RoundedCorner.m in Sources */,
 				D206FB2C1CB2764400B2143F /* UIView+Constraints.m in Sources */,
 				D2A344C61CBC157B0052F3A6 /* MJRefreshFooter.m in Sources */,
@@ -2822,11 +2879,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SuperTicket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangwanli.SuperTicket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SuperTicket/SuperTicket-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -2838,11 +2898,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SuperTicket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangwanli.SuperTicket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SuperTicket/SuperTicket-Bridging-Header.h";
 			};
 			name = Release;

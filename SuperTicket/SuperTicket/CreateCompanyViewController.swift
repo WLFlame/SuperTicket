@@ -119,6 +119,21 @@ class CreateCompanyViewController: UITableViewController {
         }
     }
     
+    
+    @IBAction func deleteCompanyAction() {
+        company?.delete()
+        showHud()
+        company?.saveInBackgroundWithBlock({[weak self] (succeed, error) in
+            self?.hideHud()
+            if succeed {
+                WLLinkUtil.sharedInstance.popToTabbarController(self!)
+                 NSNotificationCenter.defaultCenter().postNotificationName(WLConfig.Notification.CompanyDataDidChangeNotification, object: [k_NotificationChangeType : WLConfig.NotificationChangeType.Remove.rawValue, k_Company : self!.company!])
+            } else {
+                WLAlert.alertSorry(message: "删除失败", inViewController: self)
+            }
+        })
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
@@ -142,5 +157,14 @@ extension CreateCompanyViewController: ImagePickerDelegate {
          WLLinkUtil.sharedInstance.dismissAvatarVc()
     }
     
+}
+
+extension CreateCompanyViewController {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 2 && vcType == .Create {
+            return 0
+        }
+        return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }
 }
 

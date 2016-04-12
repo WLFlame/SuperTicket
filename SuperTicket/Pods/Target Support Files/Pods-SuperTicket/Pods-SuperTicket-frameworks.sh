@@ -89,7 +89,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SuperTicket/ImagePicker.framework"
   install_framework "Pods-SuperTicket/Kingfisher.framework"
   install_framework "Pods-SuperTicket/NVActivityIndicatorView.framework"
-  install_framework "Pods-SuperTicket/RAMAnimatedTabBarController.framework"
   install_framework "Pods-SuperTicket/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -98,6 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SuperTicket/ImagePicker.framework"
   install_framework "Pods-SuperTicket/Kingfisher.framework"
   install_framework "Pods-SuperTicket/NVActivityIndicatorView.framework"
-  install_framework "Pods-SuperTicket/RAMAnimatedTabBarController.framework"
   install_framework "Pods-SuperTicket/SnapKit.framework"
 fi

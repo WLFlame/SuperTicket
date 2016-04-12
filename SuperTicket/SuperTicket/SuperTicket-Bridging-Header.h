@@ -14,3 +14,4 @@
 #import "TPKeyboardAvoidingTableView.h"
 #import "UIImage+Resize.h"
 #import "MJRefresh.h"
+#import "WifiHelper.h"

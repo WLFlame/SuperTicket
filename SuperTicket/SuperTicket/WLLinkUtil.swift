@@ -77,6 +77,18 @@ class WLLinkUtil {
         
     }
     
+    func linkToActivityListVc(send: UIViewController, company: Company) {
+        let vc = ActivityListViewController.createFromStoryBoard(StoryBoardName.Activity.rawValue, vcStroreId: "ActivityListViewController") as! ActivityListViewController
+        vc.company = company
+        send.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    func popToTabbarController(send: UIViewController) {
+            send.navigationController?.popToViewController((send.navigationController?.viewControllers[0])!, animated: true)
+        
+    }
+    
 }
 
 

@@ -4,7 +4,6 @@
 # use_frameworks!
 use_frameworks!
 target 'SuperTicket' do
-pod 'RAMAnimatedTabBarController', '~> 1.2.2'
 pod 'SnapKit', '~> 0.20.0'
 pod 'ChameleonFramework/Swift'
 pod 'AVOSCloud'

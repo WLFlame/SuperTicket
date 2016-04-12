@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -960,11 +960,7 @@
         <scene sceneID="2n1-a3-zK3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZHh-Ir-k4Q" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="签到" image="icon_contact" selectedImage="icon_contact_active" id="Dyl-qd-rbV" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="FJW-5g-8mV" id="5Wv-33-5PA"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="签到" image="icon_contact" selectedImage="icon_contact_active" id="Dyl-qd-rbV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gVf-e8-l3E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -976,7 +972,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESm-PR-2pl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="FJW-5g-8mV" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-17" y="-1568"/>
         </scene>
@@ -984,11 +979,7 @@
         <scene sceneID="ObR-TS-3fY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EMD-mE-oDc" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="活动" image="icon_contact" selectedImage="icon_contact_active" id="C9I-pV-JN1" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="1PJ-kg-zHR" id="B9G-1U-hqQ"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="活动" image="icon_contact" selectedImage="icon_contact_active" id="C9I-pV-JN1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SDW-tk-j7D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1000,7 +991,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Nz-6W-jAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="1PJ-kg-zHR" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-17" y="-818"/>
         </scene>
@@ -1008,11 +998,7 @@
         <scene sceneID="hv3-og-ans">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EuB-KG-mee" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="报表" image="icon_contact" selectedImage="icon_contact_active" id="Ci2-Mf-o68" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="OHP-hl-jnu" id="IGw-rd-7Ga"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="报表" image="icon_contact" selectedImage="icon_contact_active" id="Ci2-Mf-o68"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U2q-An-ikP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1024,7 +1010,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DA2-dd-2UW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="OHP-hl-jnu" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-9" y="-74"/>
         </scene>
@@ -1032,11 +1017,7 @@
         <scene sceneID="ggV-Ot-toi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3A-Dx-eSe" customClass="WLNavigationController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" image="icon_contact" selectedImage="icon_contact_active" id="zGc-Ir-6tA" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="g2P-o2-atj" id="y7w-S3-7OJ"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="我" image="icon_contact" selectedImage="icon_contact_active" id="zGc-Ir-6tA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="35l-z8-fl4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1048,7 +1029,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DX3-dm-M6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="g2P-o2-atj" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-17" y="640"/>
         </scene>

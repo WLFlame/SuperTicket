@@ -38,7 +38,7 @@ class WLNavigationController: UINavigationController {
             
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
             
-            WLLinkUtil.sharedInstance.tabVc?.animationTabBarHidden(true)
+            viewController.hidesBottomBarWhenPushed = true
         }
         
         super.pushViewController(viewController, animated: animated)
@@ -46,10 +46,10 @@ class WLNavigationController: UINavigationController {
     
     func backBtnClick() {
         popViewControllerAnimated(isAnimation)
-        if viewControllers.count == 1 {
-            WLLinkUtil.sharedInstance.tabVc?.animationTabBarHidden(false)
-        }
         
     }
     
 }
+
+
+
