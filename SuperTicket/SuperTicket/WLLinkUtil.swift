@@ -12,6 +12,12 @@ enum ShowStyle {
     case Push, Modal, None
 }
 
+enum StoryBoardName: String {
+    case Main = "Main"
+    case Signup = "Signup"
+    case Activity = "Activity"
+}
+
 class WLLinkUtil {
     static let sharedInstance = WLLinkUtil()
     
@@ -46,12 +52,7 @@ class WLLinkUtil {
     
     func linkToCreateOrUpdateCompanyVc(send: UIViewController, company: Company?) {
         let vc = CreateCompanyViewController.createFromStoryBoard("Activity", vcStroreId: "CreateCompanyViewController") as! CreateCompanyViewController
-        if let company = company {
-            vc.company = company
-            vc.title = "添加单位信息"
-        } else {
-            vc.title = "修改单位信息"
-        }
+        vc.company = company
         send.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -67,6 +68,13 @@ class WLLinkUtil {
         if let imagePicker = imagePicker {
             imagePicker.dismissViewControllerAnimated(true, completion: nil)
         }
+    }
+    
+    func linkToCompanyDetailVc(send: UIViewController, company: Company) {
+        let vc = CompanyDetailViewController.createFromStoryBoard(StoryBoardName.Activity.rawValue, vcStroreId: "CompanyDetailViewController") as! CompanyDetailViewController
+        vc.company = company
+        send.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }

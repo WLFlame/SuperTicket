@@ -13,5 +13,6 @@ pod 'AVOSCloudCrashReporting'
 pod 'NVActivityIndicatorView'
 pod 'DZNEmptyDataSet'
 pod 'ImagePicker'
+pod 'Kingfisher', '~> 2.2'
 end
 

@@ -297,6 +297,7 @@
 		D2FB0E041CB6A8C40025BF4D /* QZNoticeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FB0E031CB6A8C40025BF4D /* QZNoticeTextField.swift */; };
 		D2FB0E061CB6ADE90025BF4D /* ObjectKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FB0E051CB6ADE90025BF4D /* ObjectKeys.swift */; };
 		D2FB0E081CB6B0F50025BF4D /* WLHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FB0E071CB6B0F50025BF4D /* WLHud.swift */; };
+		F6270DC61CBCDBF00086AEE2 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6270DC51CBCDBF00086AEE2 /* CompanyDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -838,6 +839,7 @@
 		D2FB0E051CB6ADE90025BF4D /* ObjectKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectKeys.swift; sourceTree = "<group>"; };
 		D2FB0E071CB6B0F50025BF4D /* WLHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLHud.swift; sourceTree = "<group>"; };
 		ED3F7024A8D13E5FCB6C924D /* Pods-SuperTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperTicket/Pods-SuperTicket.debug.xcconfig"; sourceTree = "<group>"; };
+		F6270DC51CBCDBF00086AEE2 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		F7D0D304EDA08742C81DD1C3 /* Pods_SuperTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -2057,6 +2059,7 @@
 		D2EDC03C1CB103CA005A4481 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6270DC41CBCDBD00086AEE2 /* CompanyDetailViewController */,
 				D2EFD85B1CBAB85C00E531A4 /* CreateCompanyViewController */,
 				D2FB0DDE1CB694070025BF4D /* RegisterViewController */,
 				D206FB581CB291F500B2143F /* SendVerifyCodeControlelr */,
@@ -2289,6 +2292,14 @@
 				D2FB0E031CB6A8C40025BF4D /* QZNoticeTextField.swift */,
 			);
 			name = NoticeTextField;
+			sourceTree = "<group>";
+		};
+		F6270DC41CBCDBD00086AEE2 /* CompanyDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6270DC51CBCDBF00086AEE2 /* CompanyDetailViewController.swift */,
+			);
+			name = CompanyDetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2680,6 +2691,7 @@
 				D206FAF81CB2764400B2143F /* UIImage+RemoteSize.m in Sources */,
 				D206FB061CB2764400B2143F /* UILabel+SuggestSize.m in Sources */,
 				D206FB161CB2764400B2143F /* UIScrollView+Addition.m in Sources */,
+				F6270DC61CBCDBF00086AEE2 /* CompanyDetailViewController.swift in Sources */,
 				D206FAC01CB2764400B2143F /* NSURLRequest+ParamsFromDictionary.m in Sources */,
 				D206FB031CB2764400B2143F /* UILabel+AutomaticWriting.m in Sources */,
 				D206FA781CB2764400B2143F /* NSData+Base64.m in Sources */,

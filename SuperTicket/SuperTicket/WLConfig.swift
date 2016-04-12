@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 
+let k_NotificationChangeType = "k_NotificationChangeType"
+
 class WLConfig {
     class func clientType() -> Int {
         // TODO: clientType
@@ -24,7 +26,13 @@ class WLConfig {
     static let appURLString = "itms-apps://itunes.apple.com/app/id" + "983891256"
     
     struct Notification {
-//        static let 
+        static let CompanyDataDidChangeNotification = "CompanyDataDidChangeNotification"
+    }
+    
+    enum NotificationChangeType: String {
+        case Add = "Add"
+        case Update = "Update"
+        case Remove = "Remove"
     }
     
     struct Location {

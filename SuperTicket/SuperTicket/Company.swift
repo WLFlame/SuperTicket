@@ -8,8 +8,10 @@
 
 import UIKit
 
+let k_Company_IncreamentKey = "companyId"
+
 class Company: AVObject, AVSubclassing {
-    @NSManaged var companyId: String!
+    @NSManaged var companyId: NSNumber!
     @NSManaged var nick: String!
     @NSManaged var avatar: AVFile?
     @NSManaged var introduce: String?
@@ -22,4 +24,8 @@ class Company: AVObject, AVSubclassing {
         return "Company";
     }
 
+}
+
+func ==(lhs: Company, rhs: Company) -> Bool {
+    return lhs.companyId == rhs.companyId
 }

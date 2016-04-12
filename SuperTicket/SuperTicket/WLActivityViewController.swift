@@ -17,11 +17,35 @@ class WLActivityViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        registerNotification()
         tableView.mj_header.beginRefreshing()
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    private func registerNotification() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(WLActivityViewController.companyDataDidChange(_:)), name: WLConfig.Notification.CompanyDataDidChangeNotification, object: nil)
+    }
+    
+    @objc private func companyDataDidChange(notificaiton: NSNotification) {
+        guard let obj = notificaiton.object as? [String : AnyObject] else {
+            return
+        }
+        let company = obj[k_Company] as! Company
+        if obj[k_NotificationChangeType]! as! String == WLConfig.NotificationChangeType.Update.rawValue {
+            companies.removeAtIndex(companies.indexOf(company)!)
+            companies.append(company)
+            tableView.reloadData()
+        } else {
+            companies.insert(company, atIndex: 0)
+            tableView.reloadData()
+        }
+       
+    }
+    
     private func configureUI() {
-        title = "活动"
         tableView.tableFooterView = UIView()
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
@@ -38,6 +62,7 @@ class WLActivityViewController: UITableViewController {
     
     private func fetchData() {
         let query = AVQuery(className: k_Company)
+        query.cachePolicy = .CacheThenNetwork
         query.findObjectsInBackgroundWithBlock {[weak self] (companies, error) in
             
             if error != nil {
@@ -54,6 +79,7 @@ class WLActivityViewController: UITableViewController {
                     self?.tableView.mj_header.endRefreshing()
                 })
             }
+            
            
         }
     }
@@ -73,6 +99,11 @@ extension WLActivityViewController {
         }
         cell?.textLabel?.text = companies[indexPath.row].nick
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        WLLinkUtil.sharedInstance.linkToCompanyDetailVc(self, company: self.companies[indexPath.row])
     }
 
 }

@@ -46,7 +46,10 @@ class WLNavigationController: UINavigationController {
     
     func backBtnClick() {
         popViewControllerAnimated(isAnimation)
-        WLLinkUtil.sharedInstance.tabVc?.animationTabBarHidden(false)
+        if viewControllers.count == 1 {
+            WLLinkUtil.sharedInstance.tabVc?.animationTabBarHidden(false)
+        }
+        
     }
     
 }
