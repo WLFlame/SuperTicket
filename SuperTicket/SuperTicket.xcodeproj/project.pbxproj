@@ -274,6 +274,10 @@
 		D2A344DD1CBD38230052F3A6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344DC1CBD38230052F3A6 /* Activity.swift */; };
 		D2A344E01CBD49590052F3A6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344DF1CBD49590052F3A6 /* ActivityViewController.swift */; };
 		D2A344E41CBD4FEC0052F3A6 /* WifiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344E31CBD4FEC0052F3A6 /* WifiHelper.m */; };
+		D2C9CC0B1CBEACF700A655C8 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9CC0A1CBEACF700A655C8 /* DatePickerView.swift */; };
+		D2C9CC0E1CBEAD6F00A655C8 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9CC0D1CBEAD6F00A655C8 /* CompleteView.swift */; };
+		D2C9CC101CBEAD7F00A655C8 /* CompleteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C9CC0F1CBEAD7F00A655C8 /* CompleteView.xib */; };
+		D2C9CC121CBEAE6700A655C8 /* LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9CC111CBEAE6700A655C8 /* LoadFromNib.swift */; };
 		D2EDC0471CB10561005A4481 /* WLAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC0461CB10561005A4481 /* WLAlert.swift */; };
 		D2EDC04A1CB107DB005A4481 /* Proposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC0491CB107DB005A4481 /* Proposer.swift */; };
 		D2EDC04C1CB10897005A4481 /* WLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC04B1CB10897005A4481 /* WLUserDefaults.swift */; };
@@ -821,6 +825,10 @@
 		D2A344E21CBD4FEC0052F3A6 /* WifiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiHelper.h; sourceTree = "<group>"; };
 		D2A344E31CBD4FEC0052F3A6 /* WifiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiHelper.m; sourceTree = "<group>"; };
 		D2A344E51CBD50540052F3A6 /* WLSingletonH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSingletonH.h; sourceTree = "<group>"; };
+		D2C9CC0A1CBEACF700A655C8 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		D2C9CC0D1CBEAD6F00A655C8 /* CompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		D2C9CC0F1CBEAD7F00A655C8 /* CompleteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompleteView.xib; sourceTree = "<group>"; };
+		D2C9CC111CBEAE6700A655C8 /* LoadFromNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFromNib.swift; sourceTree = "<group>"; };
 		D2EDC0461CB10561005A4481 /* WLAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLAlert.swift; sourceTree = "<group>"; };
 		D2EDC0491CB107DB005A4481 /* Proposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposer.swift; sourceTree = "<group>"; };
 		D2EDC04B1CB10897005A4481 /* WLUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLUserDefaults.swift; sourceTree = "<group>"; };
@@ -2101,6 +2109,23 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		D2C9CC091CBEACE200A655C8 /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				D2C9CC0A1CBEACF700A655C8 /* DatePickerView.swift */,
+			);
+			name = DatePickerView;
+			sourceTree = "<group>";
+		};
+		D2C9CC0C1CBEAD5200A655C8 /* CompleteView */ = {
+			isa = PBXGroup;
+			children = (
+				D2C9CC0D1CBEAD6F00A655C8 /* CompleteView.swift */,
+				D2C9CC0F1CBEAD7F00A655C8 /* CompleteView.xib */,
+			);
+			name = CompleteView;
+			sourceTree = "<group>";
+		};
 		D2EDC03C1CB103CA005A4481 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -2125,6 +2150,8 @@
 		D2EDC03D1CB1041D005A4481 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2C9CC0C1CBEAD5200A655C8 /* CompleteView */,
+				D2C9CC091CBEACE200A655C8 /* DatePickerView */,
 				D2A344D91CBD369E0052F3A6 /* ActivityListCell */,
 				D2A3447E1CBBFAB60052F3A6 /* TitleBarButtonItem */,
 				D2EFD8581CBAB4B600E531A4 /* ImageBarButtonItem */,
@@ -2204,6 +2231,7 @@
 			isa = PBXGroup;
 			children = (
 				D206F84F1CB272AF00B2143F /* InitialFromStoryboard.swift */,
+				D2C9CC111CBEAE6700A655C8 /* LoadFromNib.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -2420,6 +2448,7 @@
 				D2A344D11CBC157B0052F3A6 /* MJRefresh.bundle in Resources */,
 				D2EDC0921CB1608D005A4481 /* Activity.storyboard in Resources */,
 				D206FA851CB2764400B2143F /* NSDateTimeAgo.bundle in Resources */,
+				D2C9CC101CBEAD7F00A655C8 /* CompleteView.xib in Resources */,
 				D2EDC0621CB13DBC005A4481 /* Signup.storyboard in Resources */,
 				D23D37C21CB0114700CE01B2 /* Main.storyboard in Resources */,
 			);
@@ -2526,6 +2555,7 @@
 				D2EDC0601CB13D9D005A4481 /* WLActAssignmentController.swift in Sources */,
 				D206FAA51CB2764400B2143F /* NSRunLoop+PerformBlock.m in Sources */,
 				D206FADF1CB2764400B2143F /* UICollectionView+ARDynamicCacheHeightLayoutCell.m in Sources */,
+				D2C9CC0B1CBEACF700A655C8 /* DatePickerView.swift in Sources */,
 				D206FB5D1CB2935100B2143F /* QZVerifyCodeBtn.swift in Sources */,
 				D2A344C71CBC157B0052F3A6 /* MJRefreshHeader.m in Sources */,
 				D206FAFE1CB2764400B2143F /* UIImageView+BetterFace.m in Sources */,
@@ -2567,6 +2597,7 @@
 				D206FB001CB2764400B2143F /* UIImageView+GeometryConversion.m in Sources */,
 				D206FB381CB2764400B2143F /* UIView+Screenshot.m in Sources */,
 				D206FA771CB2764400B2143F /* NSData+APNSToken.m in Sources */,
+				D2C9CC0E1CBEAD6F00A655C8 /* CompleteView.swift in Sources */,
 				D206FB191CB2764400B2143F /* UIScrollView+Pages.m in Sources */,
 				D206FB411CB2764400B2143F /* UIViewController+DDPopUpViewController.m in Sources */,
 				D206FB3E1CB2764400B2143F /* UIViewController+BackButtonItemTitle.m in Sources */,
@@ -2661,6 +2692,7 @@
 				D206FA721CB2764400B2143F /* CLLocation+CH1903.m in Sources */,
 				D2EDC0901CB1602E005A4481 /* WLActivityViewController.swift in Sources */,
 				D206FACF1CB2764400B2143F /* UIApplication+NetworkActivityIndicator.m in Sources */,
+				D2C9CC121CBEAE6700A655C8 /* LoadFromNib.swift in Sources */,
 				D206FB521CB2764400B2143F /* UIWindow+Hierarchy.m in Sources */,
 				D206FB571CB2836F00B2143F /* WLCornerBtn.swift in Sources */,
 				D206FA9D1CB2764400B2143F /* NSObject+AutoCoding.m in Sources */,

@@ -89,6 +89,12 @@ class WLLinkUtil {
         
     }
     
+    func linkToCreateActivityVc(send: UIViewController, company: Company) {
+        let vc = ActivityViewController.createFromStoryBoard("Activity", vcStroreId: "ActivityViewController") as! ActivityViewController
+        vc.company = company
+        send.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 

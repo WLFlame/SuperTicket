@@ -15,3 +15,4 @@
 #import "UIImage+Resize.h"
 #import "MJRefresh.h"
 #import "WifiHelper.h"
+#import "UIView+Nib.h"

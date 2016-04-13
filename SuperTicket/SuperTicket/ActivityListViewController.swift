@@ -13,7 +13,17 @@ class ActivityListViewController: UITableViewController {
     var activities: [Activity] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+        
         fetchData()
+    }
+    
+    private func configureUI() {
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
+        navigationItem.rightBarButtonItem = ImageBarButtonItem(image: UIImage(named: "add")!, tap: {[weak self] in
+            WLLinkUtil.sharedInstance.linkToCreateActivityVc(self!, company: self!.company)
+        })
     }
     
     private func fetchData() {
@@ -23,8 +33,15 @@ class ActivityListViewController: UITableViewController {
         query?.findObjectsInBackgroundWithBlock({[weak self] (activities, error) in
             self?.hideHud()
             if let activities = activities as? [Activity] {
-                self?.activities = activities
-                self?.tableView.reloadData()
+                if activities.count > 0 {
+                    self?.activities = activities
+                    self?.tableView.reloadData()
+                } else {
+                    self?.tableView.reloadEmptyDataSet()
+                }
+                
+            } else {
+                self?.tableView.reloadEmptyDataSet()
             }
         })
     }
