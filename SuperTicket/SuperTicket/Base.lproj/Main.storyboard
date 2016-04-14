@@ -145,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="795" y="-1568"/>
         </scene>
-        <!--活动-->
+        <!--Empty Data Set Delegate-->
         <scene sceneID="vLC-AS-bY2">
             <objects>
                 <tableViewController id="7cb-9U-igP" customClass="WLActivityViewController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
@@ -166,6 +166,8 @@
                         <connections>
                             <outlet property="dataSource" destination="7cb-9U-igP" id="09B-Af-zVh"/>
                             <outlet property="delegate" destination="7cb-9U-igP" id="QCc-g7-5Di"/>
+                            <outlet property="emptyDataSetDelegate" destination="7cb-9U-igP" id="S3O-Vw-pG6"/>
+                            <outlet property="emptyDataSetSource" destination="7cb-9U-igP" id="sdT-bQ-u51"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="活动" id="TBr-ox-ZcQ"/>

@@ -19,6 +19,7 @@ class WLActivityViewController: UITableViewController {
         configureUI()
         registerNotification()
         tableView.mj_header.beginRefreshing()
+        
     }
     
     deinit {
@@ -48,6 +49,7 @@ class WLActivityViewController: UITableViewController {
             companies.removeAtIndex(companies.indexOf(company)!)
             tableView.reloadData()
             
+            
         default:
             break
         }
@@ -56,9 +58,6 @@ class WLActivityViewController: UITableViewController {
     
     private func configureUI() {
         tableView.tableFooterView = UIView()
-        tableView.emptyDataSetSource = self
-        tableView.emptyDataSetDelegate = self
-        
         navigationItem.rightBarButtonItem = ImageBarButtonItem(image: UIImage(named: "add")!, tap: {[weak self] in
             if self == nil { return }
             WLLinkUtil.sharedInstance.linkToCreateOrUpdateCompanyVc(self!)
@@ -73,20 +72,16 @@ class WLActivityViewController: UITableViewController {
         let query = AVQuery(className: k_Company)
         query.cachePolicy = .CacheThenNetwork
         query.findObjectsInBackgroundWithBlock {[weak self] (companies, error) in
-            
+            print(NSThread.currentThread())
             if error != nil {
-                asyncInMain({ 
-                    self?.tableView.reloadEmptyDataSet()
-                    self?.tableView.mj_header.endRefreshing()
-                })
+                self?.tableView.reloadData()
+                self?.tableView.mj_header.endRefreshing()
                 return
             }
             if let companies = companies as? [Company] {
                 self?.companies = companies
-                asyncInMain({ 
-                     self?.tableView.reloadData()
-                    self?.tableView.mj_header.endRefreshing()
-                })
+                 self?.tableView.reloadData()
+                self?.tableView.mj_header.endRefreshing()
             }
             
            
@@ -94,6 +89,8 @@ class WLActivityViewController: UITableViewController {
     }
 
 }
+
+
 
 extension WLActivityViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,8 +113,4 @@ extension WLActivityViewController {
     }
 
 }
-
-extension WLActivityViewController {
-}
-
 

@@ -16,3 +16,5 @@
 #import "MJRefresh.h"
 #import "WifiHelper.h"
 #import "UIView+Nib.h"
+#import "NSDate+Formatter.h"
+#import "QZPlaceholderTextView.h"

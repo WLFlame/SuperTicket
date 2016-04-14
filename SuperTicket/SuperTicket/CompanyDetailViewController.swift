@@ -54,6 +54,9 @@ class CompanyDetailViewController: UITableViewController {
 extension CompanyDetailViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        WLLinkUtil.sharedInstance.linkToActivityListVc(self, company: company)
+        if indexPath.section == 0 && indexPath.row == 2 {
+            WLLinkUtil.sharedInstance.linkToActivityListVc(self, company: company)
+        }
+       
     }
 }

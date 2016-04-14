@@ -694,10 +694,10 @@
             </objects>
             <point key="canvasLocation" x="424" y="-710"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Chose Wifi View Controller-->
         <scene sceneID="WJS-yE-ejv">
             <objects>
-                <tableViewController id="oir-Iv-U3Q" sceneMemberID="viewController">
+                <tableViewController id="oir-Iv-U3Q" customClass="ChoseWifiViewController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ejc-hX-p04">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -727,6 +727,9 @@
                                                     <rect key="frame" x="555" y="7" width="30" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="刷新"/>
+                                                    <connections>
+                                                        <action selector="btnClickRefreshWifi:" destination="oir-Iv-U3Q" eventType="touchUpInside" id="dH9-cR-Gag"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -778,6 +781,10 @@
                             <outlet property="delegate" destination="oir-Iv-U3Q" id="biI-Jn-knB"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="fdWifiSSD" destination="i4k-j9-au9" id="8FG-pG-z4z"/>
+                        <outlet property="lbLocation" destination="4Y3-Ac-XbL" id="llr-d5-8Vz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7h-Ya-dye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -867,7 +874,7 @@
         <!--添加时段-->
         <scene sceneID="Czg-gW-0ec">
             <objects>
-                <tableViewController title="添加时段" id="x00-rV-HKo" sceneMemberID="viewController">
+                <tableViewController title="添加时段" id="x00-rV-HKo" customClass="ChoseTimeSectionController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="mrg-83-qtt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1060,7 +1067,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oir-Iv-U3Q" kind="show" id="9Xe-j2-KE2"/>
+                                            <segue destination="oir-Iv-U3Q" kind="show" identifier="" id="9Xe-j2-KE2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Uen-Jb-et6">
@@ -1086,36 +1093,16 @@
                                             <segue destination="x00-rV-HKo" kind="show" id="ZYv-JS-WTh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="E5L-fc-hZq">
-                                        <rect key="frame" x="0.0" y="178" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E5L-fc-hZq" id="psa-ab-5g3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已报名人数: 11人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzO-EI-9Io">
-                                                    <rect key="frame" x="15" y="13" width="112" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="dzO-EI-9Io" firstAttribute="leading" secondItem="psa-ab-5g3" secondAttribute="leading" constant="15" id="ATv-u3-Orz"/>
-                                                <constraint firstItem="dzO-EI-9Io" firstAttribute="centerY" secondItem="psa-ab-5g3" secondAttribute="centerY" id="Iyw-bU-oha"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uw7-6u-zdx">
-                                        <rect key="frame" x="0.0" y="222" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="178" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uw7-6u-zdx" id="cAk-XZ-eRs">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="开始时间" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fju-77-vyd">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="活动开始时间" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fju-77-vyd">
                                                     <rect key="frame" x="15" y="7" width="271" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lD-RY-Szu">
@@ -1124,9 +1111,9 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="结束时间" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZR-nm-lDa">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="活动结束时间" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZR-nm-lDa">
                                                     <rect key="frame" x="314" y="7" width="271" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -1146,23 +1133,25 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="活动说明" id="b9M-f6-maI">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wew-Rh-Vdl">
-                                        <rect key="frame" x="0.0" y="316" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="wew-Rh-Vdl">
+                                        <rect key="frame" x="0.0" y="272" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wew-Rh-Vdl" id="99R-PW-nSr">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟全明星赛开赛了，大家请多多支持" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zw3-vs-s5w">
-                                                    <rect key="frame" x="15" y="13.5" width="247" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E3q-vv-ngp" customClass="QZPlaceholderTextView">
+                                                    <rect key="frame" x="10" y="8" width="580" height="73.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Zw3-vs-s5w" firstAttribute="centerY" secondItem="99R-PW-nSr" secondAttribute="centerY" id="A93-Ce-g0T"/>
-                                                <constraint firstItem="Zw3-vs-s5w" firstAttribute="leading" secondItem="99R-PW-nSr" secondAttribute="leading" constant="15" id="Aov-Xd-rgk"/>
+                                                <constraint firstAttribute="bottom" secondItem="E3q-vv-ngp" secondAttribute="bottom" constant="8" id="9ms-xR-aiE"/>
+                                                <constraint firstItem="E3q-vv-ngp" firstAttribute="leading" secondItem="99R-PW-nSr" secondAttribute="leading" constant="10" id="Fsm-0r-dXQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="E3q-vv-ngp" secondAttribute="trailing" constant="10" id="S35-av-h1M"/>
+                                                <constraint firstItem="E3q-vv-ngp" firstAttribute="top" secondItem="99R-PW-nSr" secondAttribute="top" constant="8" id="d92-gW-CaT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1171,7 +1160,7 @@
                             <tableViewSection id="wQG-fI-5f5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zvO-PC-fdu">
-                                        <rect key="frame" x="0.0" y="396" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="398" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zvO-PC-fdu" id="N4y-lw-5LH">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -1208,10 +1197,9 @@
                         <outlet property="fdActName" destination="6dJ-Ff-qLV" id="sUr-aU-iWU"/>
                         <outlet property="fdEndTimeField" destination="CZR-nm-lDa" id="xHQ-pl-Dh7"/>
                         <outlet property="fdStartTimeField" destination="fju-77-vyd" id="oJm-pn-IyR"/>
-                        <outlet property="lbActIntroduce" destination="Zw3-vs-s5w" id="NKc-wJ-If0"/>
+                        <outlet property="introduceTextView" destination="E3q-vv-ngp" id="EGT-As-2mT"/>
                         <outlet property="lbGps" destination="MJG-uP-LoD" id="uG7-yW-cRz"/>
                         <outlet property="lbHttp" destination="IAl-vj-n1R" id="cL6-aI-B83"/>
-                        <outlet property="lbSignupCount" destination="dzO-EI-9Io" id="hNQ-dN-Dm1"/>
                         <outlet property="lbWifi" destination="A1K-8J-n6t" id="Tcj-dN-BD9"/>
                     </connections>
                 </tableViewController>

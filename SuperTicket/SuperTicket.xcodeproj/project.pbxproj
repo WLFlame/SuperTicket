@@ -306,6 +306,9 @@
 		D2FB0E041CB6A8C40025BF4D /* QZNoticeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FB0E031CB6A8C40025BF4D /* QZNoticeTextField.swift */; };
 		D2FB0E061CB6ADE90025BF4D /* ObjectKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FB0E051CB6ADE90025BF4D /* ObjectKeys.swift */; };
 		D2FB0E081CB6B0F50025BF4D /* WLHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FB0E071CB6B0F50025BF4D /* WLHud.swift */; };
+		D2FD509F1CBFEB2100A002D4 /* QZPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FD509E1CBFEB2100A002D4 /* QZPlaceholderTextView.m */; };
+		D2FD50A21CBFEF1D00A002D4 /* ChoseWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD50A11CBFEF1D00A002D4 /* ChoseWifiViewController.swift */; };
+		D2FD50A51CBFF05800A002D4 /* ChoseTimeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD50A41CBFF05800A002D4 /* ChoseTimeSectionController.swift */; };
 		F6270DC61CBCDBF00086AEE2 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6270DC51CBCDBF00086AEE2 /* CompanyDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -858,6 +861,10 @@
 		D2FB0E031CB6A8C40025BF4D /* QZNoticeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZNoticeTextField.swift; sourceTree = "<group>"; };
 		D2FB0E051CB6ADE90025BF4D /* ObjectKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectKeys.swift; sourceTree = "<group>"; };
 		D2FB0E071CB6B0F50025BF4D /* WLHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLHud.swift; sourceTree = "<group>"; };
+		D2FD509D1CBFEB2100A002D4 /* QZPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZPlaceholderTextView.h; sourceTree = "<group>"; };
+		D2FD509E1CBFEB2100A002D4 /* QZPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZPlaceholderTextView.m; sourceTree = "<group>"; };
+		D2FD50A11CBFEF1D00A002D4 /* ChoseWifiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoseWifiViewController.swift; sourceTree = "<group>"; };
+		D2FD50A41CBFF05800A002D4 /* ChoseTimeSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoseTimeSectionController.swift; sourceTree = "<group>"; };
 		ED3F7024A8D13E5FCB6C924D /* Pods-SuperTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperTicket/Pods-SuperTicket.debug.xcconfig"; sourceTree = "<group>"; };
 		F6270DC51CBCDBF00086AEE2 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		F7D0D304EDA08742C81DD1C3 /* Pods_SuperTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2126,9 +2133,19 @@
 			name = CompleteView;
 			sourceTree = "<group>";
 		};
+		D2D259811CC0070A002FA695 /* ChoseLocViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ChoseLocViewController;
+			sourceTree = "<group>";
+		};
 		D2EDC03C1CB103CA005A4481 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2D259811CC0070A002FA695 /* ChoseLocViewController */,
+				D2FD50A31CBFEF2700A002D4 /* ChoseTimeSectionController */,
+				D2FD50A01CBFEEFC00A002D4 /* ChoseWifiViewController */,
 				D2A344DE1CBD49410052F3A6 /* ActivityViewController */,
 				D2A344D61CBD353F0052F3A6 /* ActivityListViewController */,
 				F6270DC41CBCDBD00086AEE2 /* CompanyDetailViewController */,
@@ -2150,6 +2167,7 @@
 		D2EDC03D1CB1041D005A4481 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2FD509C1CBFEAFF00A002D4 /* PlaceHolderTextView */,
 				D2C9CC0C1CBEAD5200A655C8 /* CompleteView */,
 				D2C9CC091CBEACE200A655C8 /* DatePickerView */,
 				D2A344D91CBD369E0052F3A6 /* ActivityListCell */,
@@ -2373,6 +2391,31 @@
 			name = NoticeTextField;
 			sourceTree = "<group>";
 		};
+		D2FD509C1CBFEAFF00A002D4 /* PlaceHolderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD509D1CBFEB2100A002D4 /* QZPlaceholderTextView.h */,
+				D2FD509E1CBFEB2100A002D4 /* QZPlaceholderTextView.m */,
+			);
+			name = PlaceHolderTextView;
+			sourceTree = "<group>";
+		};
+		D2FD50A01CBFEEFC00A002D4 /* ChoseWifiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD50A11CBFEF1D00A002D4 /* ChoseWifiViewController.swift */,
+			);
+			name = ChoseWifiViewController;
+			sourceTree = "<group>";
+		};
+		D2FD50A31CBFEF2700A002D4 /* ChoseTimeSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD50A41CBFF05800A002D4 /* ChoseTimeSectionController.swift */,
+			);
+			name = ChoseTimeSectionController;
+			sourceTree = "<group>";
+		};
 		F6270DC41CBCDBD00086AEE2 /* CompanyDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2560,6 +2603,7 @@
 				D2A344C71CBC157B0052F3A6 /* MJRefreshHeader.m in Sources */,
 				D206FAFE1CB2764400B2143F /* UIImageView+BetterFace.m in Sources */,
 				D206FA841CB2764400B2143F /* NSDate+Utilities.m in Sources */,
+				D2FD50A51CBFF05800A002D4 /* ChoseTimeSectionController.swift in Sources */,
 				D2A344CB1CBC157B0052F3A6 /* MJRefreshBackGifFooter.m in Sources */,
 				D2A344D81CBD35560052F3A6 /* ActivityListViewController.swift in Sources */,
 				D206FB331CB2764400B2143F /* UIView+Genie.m in Sources */,
@@ -2693,6 +2737,7 @@
 				D2EDC0901CB1602E005A4481 /* WLActivityViewController.swift in Sources */,
 				D206FACF1CB2764400B2143F /* UIApplication+NetworkActivityIndicator.m in Sources */,
 				D2C9CC121CBEAE6700A655C8 /* LoadFromNib.swift in Sources */,
+				D2FD50A21CBFEF1D00A002D4 /* ChoseWifiViewController.swift in Sources */,
 				D206FB521CB2764400B2143F /* UIWindow+Hierarchy.m in Sources */,
 				D206FB571CB2836F00B2143F /* WLCornerBtn.swift in Sources */,
 				D206FA9D1CB2764400B2143F /* NSObject+AutoCoding.m in Sources */,
@@ -2721,6 +2766,7 @@
 				D2EFD85D1CBAB88400E531A4 /* CreateCompanyViewController.swift in Sources */,
 				D206FA9A1CB2764400B2143F /* NSObject+AddProperty.m in Sources */,
 				D206FAA61CB2764400B2143F /* NSSet+Block.m in Sources */,
+				D2FD509F1CBFEB2100A002D4 /* QZPlaceholderTextView.m in Sources */,
 				D2EFD8531CBAA11400E531A4 /* Company.swift in Sources */,
 				D206FAF11CB2764400B2143F /* UIImage+Color.m in Sources */,
 				D206FA6A1CB2764400B2143F /* NSFetchRequest+Extensions.m in Sources */,

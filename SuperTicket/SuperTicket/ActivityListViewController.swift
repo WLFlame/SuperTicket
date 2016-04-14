@@ -45,9 +45,17 @@ class ActivityListViewController: UITableViewController {
             }
         })
     }
+    
+    
+    
 }
 
+
+
 extension ActivityListViewController {
+    
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ActivityListCell", forIndexPath: indexPath) as! ActivityListCell
         cell.activity = activities[indexPath.row]
@@ -58,3 +66,7 @@ extension ActivityListViewController {
         return activities.count
     }
 }
+
+
+
+

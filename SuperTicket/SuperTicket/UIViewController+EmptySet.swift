@@ -9,6 +9,24 @@
 import Foundation
 import DZNEmptyDataSet
 
+protocol ShowEmpty {
+    var empty: Bool {
+        get
+        set
+    }
+}
+
+extension UIViewController : ShowEmpty {
+    var empty: Bool {
+        get {
+            return false
+        }
+        
+        set {
+        }
+    }
+}
+
 extension UIViewController: DZNEmptyDataSetSource {
     public func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
         let text = "抱歉，这里还没有数据"
@@ -28,10 +46,7 @@ extension UIViewController: DZNEmptyDataSetSource {
         let muAttri = NSMutableAttributedString(string: text, attributes: [NSFontAttributeName:font, NSForegroundColorAttributeName: textColor])
         return muAttri
     }
-    
-    public func verticalOffsetForEmptyDataSet(scrollView: UIScrollView!) -> CGFloat {
-        return -225
-    }
+
     
     public func spaceHeightForEmptyDataSet(scrollView: UIScrollView!) -> CGFloat {
         return 10
@@ -44,4 +59,7 @@ extension UIViewController : DZNEmptyDataSetDelegate {
     public func emptyDataSetShouldAllowScroll(scrollView: UIScrollView!) -> Bool {
         return true
     }
+    
+   
+    
 }
