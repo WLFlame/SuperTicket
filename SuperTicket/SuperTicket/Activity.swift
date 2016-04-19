@@ -11,17 +11,21 @@ import Foundation
 //#define K_SSID @"SSID"
 //#define K_SSIDDATA @"SSIDDATA"
 class Activity: AVObject, AVSubclassing {
-    @NSManaged var activityId: String!
+    @NSManaged var activityId: NSNumber!
+    @NSManaged var companyId: NSNumber!
     @NSManaged var nick: String!
+    @NSManaged var signupCount: NSNumber!
     @NSManaged var signupPersonCount: NSNumber!
     @NSManaged var introduce: String?
     @NSManaged var isEnd: NSNumber!
-    @NSManaged var timeSection: String?
+    @NSManaged var startTimeDate: NSDate?
+    @NSManaged var endTimeDate: NSDate?
     @NSManaged var httpEnable: NSNumber!
     @NSManaged var wifiEnable: NSNumber!
     @NSManaged var gpsEnable: NSNumber!
-    @NSManaged var signInConfigure: SignInConfigure!
-    @NSManaged var signInTimeSections: AVRelation!
+    @NSManaged var signInConfigure: SignInConfigure?
+    @NSManaged var signInTimeSections: [SignInTimeSection]!
+    @NSManaged var signInLocation: SignInLocation?
     static func parseClassName() -> String! {
         return "Activity";
     }
@@ -31,18 +35,32 @@ func ==(lhs: Activity, rhs: Activity) -> Bool {
     return lhs.activityId == rhs.activityId
 }
 
+class SignInLocation: AVObject, AVSubclassing {
+    @NSManaged var activityId: NSNumber!
+    @NSManaged var name: String!
+    @NSManaged var latitude: NSNumber!
+    @NSManaged var longtitude: NSNumber!
+    static func parseClassName() -> String! {
+        return "SignInLocation"
+    }
+}
+
 class SignInConfigure: AVObject, AVSubclassing {
+    @NSManaged var activityId: NSNumber!
     @NSManaged var BSSID: String!
     @NSManaged var SSID: String!
-    @NSManaged var SSIDDATA: String!
+    @NSManaged var SSIDDATA: NSData!
     static func parseClassName() -> String! {
         return "SignInConfigure";
     }
 }
 
 class SignInTimeSection: AVObject, AVSubclassing {
+    @NSManaged var activityId: NSNumber!
+    @NSManaged var id: String!
     @NSManaged var name: String!
-    @NSManaged var section: String!
+    @NSManaged var startTime: NSDate!
+    @NSManaged var endTime: NSDate!
     static func parseClassName() -> String! {
         return "SignInTimeSection";
     }

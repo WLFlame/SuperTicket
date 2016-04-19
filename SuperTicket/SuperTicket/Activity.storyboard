@@ -504,10 +504,10 @@
             </objects>
             <point key="canvasLocation" x="-344" y="284"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Scan Activity View Controller-->
         <scene sceneID="47S-ga-9Wk">
             <objects>
-                <tableViewController id="DbB-l2-Ax0" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ScanActivityViewController" id="DbB-l2-Ax0" customClass="ScanActivityViewController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="qGX-qO-ady">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -671,6 +671,9 @@
                                                     <state key="normal" title="点击报名">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="btnClickSignup:" destination="DbB-l2-Ax0" eventType="touchUpInside" id="XgE-ZD-F7P"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -689,6 +692,16 @@
                             <outlet property="delegate" destination="DbB-l2-Ax0" id="fYp-wh-oVD"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="btnAction" destination="fve-Rk-XKf" id="3HK-LO-CZA"/>
+                        <outlet property="lbActTitle" destination="tW8-aT-8sN" id="Ycp-yU-FZg"/>
+                        <outlet property="lbGpsEnable" destination="Cku-0z-jkM" id="gar-tZ-ixr"/>
+                        <outlet property="lbHasSignupCount" destination="HRJ-wj-oJC" id="uZo-sZ-wD8"/>
+                        <outlet property="lbHttpEnable" destination="wpq-nH-ech" id="rhO-3u-HyD"/>
+                        <outlet property="lbIntroduce" destination="5qN-98-epl" id="cfB-fq-WRb"/>
+                        <outlet property="lbSignupTimeSetion" destination="UhQ-VY-Pp0" id="AMR-YQ-SFb"/>
+                        <outlet property="lbWifiEnable" destination="TGE-lp-cXL" id="mmh-kv-LFs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTc-aH-MKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -790,10 +803,10 @@
             </objects>
             <point key="canvasLocation" x="1163" y="-1685"/>
         </scene>
-        <!--View Controller-->
+        <!--Chose Location View Controller-->
         <scene sceneID="59c-yk-agu">
             <objects>
-                <viewController id="ZSF-iZ-yWj" sceneMemberID="viewController">
+                <viewController id="ZSF-iZ-yWj" customClass="ChoseLocationViewController" customModule="SuperTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mpM-0w-8Dl"/>
                         <viewControllerLayoutGuide type="bottom" id="CgR-at-a5F"/>
@@ -801,18 +814,7 @@
                     <view key="view" contentMode="scaleToFill" id="rXY-pi-4kG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x6l-rO-D0P">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="x6l-rO-D0P" firstAttribute="leading" secondItem="rXY-pi-4kG" secondAttribute="leading" id="Jcv-Vn-xvr"/>
-                            <constraint firstItem="CgR-at-a5F" firstAttribute="top" secondItem="x6l-rO-D0P" secondAttribute="bottom" id="TEs-Ge-S9V"/>
-                            <constraint firstItem="x6l-rO-D0P" firstAttribute="top" secondItem="mpM-0w-8Dl" secondAttribute="bottom" id="UYg-Lz-wEX"/>
-                            <constraint firstAttribute="trailing" secondItem="x6l-rO-D0P" secondAttribute="trailing" id="ZwM-pD-24w"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igO-uu-U3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -964,6 +966,9 @@
                                                     <color key="backgroundColor" red="0.61568627450000002" green="0.66274509800000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="提交"/>
+                                                    <connections>
+                                                        <action selector="btnClickCommit:" destination="x00-rV-HKo" eventType="touchUpInside" id="GPn-tM-Xmh"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -982,6 +987,11 @@
                             <outlet property="delegate" destination="x00-rV-HKo" id="uiB-BV-i40"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="fdEndTime" destination="Pnt-9Y-rEm" id="i8k-fe-5Sk"/>
+                        <outlet property="fdStartTime" destination="mbR-15-Ldn" id="pDl-07-x78"/>
+                        <outlet property="fdTimeSectionSummary" destination="gfx-VJ-jae" id="wC8-iu-mMo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twS-Fg-sYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1169,7 +1179,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXS-wg-f5a">
                                                     <rect key="frame" x="30" y="4" width="540" height="34"/>
                                                     <color key="backgroundColor" red="0.61568627450000002" green="0.66274509800000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="点击截止报名">
+                                                    <state key="normal" title="点击创建">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>

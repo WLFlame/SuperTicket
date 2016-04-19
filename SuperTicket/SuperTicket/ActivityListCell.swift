@@ -15,12 +15,14 @@ class ActivityListCell: UITableViewCell {
     var activity: Activity! {
         didSet {
             lbActTitle.text = activity.nick
-            lbTimeSection.text = activity.timeSection
+            
+            lbTimeSection.text = "\(activity.startTimeDate!.stringWithFormat("yyyy/MM/dd HH:mm"))-\(activity.endTimeDate!.stringWithFormat("yyyy/MM/dd HH:mm"))"
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        lbTimeSection.font = UIFont.systemFontOfSize(12)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

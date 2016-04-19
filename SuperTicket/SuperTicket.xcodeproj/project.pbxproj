@@ -241,6 +241,8 @@
 		D206FB571CB2836F00B2143F /* WLCornerBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FB561CB2836F00B2143F /* WLCornerBtn.swift */; };
 		D206FB5A1CB2921800B2143F /* WLSendVerifyCodeControlelr.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FB591CB2921800B2143F /* WLSendVerifyCodeControlelr.swift */; };
 		D206FB5D1CB2935100B2143F /* QZVerifyCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FB5C1CB2935100B2143F /* QZVerifyCodeBtn.swift */; };
+		D21FB1951CC27EB7002BC2C0 /* UserKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FB1941CC27EB7002BC2C0 /* UserKeys.swift */; };
+		D21FB1971CC28219002BC2C0 /* SigninupActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FB1961CC28219002BC2C0 /* SigninupActivity.swift */; };
 		D23D37BD1CB0114700CE01B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23D37BC1CB0114700CE01B2 /* AppDelegate.swift */; };
 		D23D37C21CB0114700CE01B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23D37C01CB0114700CE01B2 /* Main.storyboard */; };
 		D23D37C41CB0114700CE01B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23D37C31CB0114700CE01B2 /* Assets.xcassets */; };
@@ -274,10 +276,12 @@
 		D2A344DD1CBD38230052F3A6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344DC1CBD38230052F3A6 /* Activity.swift */; };
 		D2A344E01CBD49590052F3A6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A344DF1CBD49590052F3A6 /* ActivityViewController.swift */; };
 		D2A344E41CBD4FEC0052F3A6 /* WifiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344E31CBD4FEC0052F3A6 /* WifiHelper.m */; };
+		D2BE12E31CC1557A003737FB /* ChoseLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BE12E21CC1557A003737FB /* ChoseLocationViewController.swift */; };
 		D2C9CC0B1CBEACF700A655C8 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9CC0A1CBEACF700A655C8 /* DatePickerView.swift */; };
 		D2C9CC0E1CBEAD6F00A655C8 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9CC0D1CBEAD6F00A655C8 /* CompleteView.swift */; };
 		D2C9CC101CBEAD7F00A655C8 /* CompleteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C9CC0F1CBEAD7F00A655C8 /* CompleteView.xib */; };
 		D2C9CC121CBEAE6700A655C8 /* LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9CC111CBEAE6700A655C8 /* LoadFromNib.swift */; };
+		D2E1DD6F1CC2500900C96116 /* ScanActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E1DD6E1CC2500900C96116 /* ScanActivityViewController.swift */; };
 		D2EDC0471CB10561005A4481 /* WLAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC0461CB10561005A4481 /* WLAlert.swift */; };
 		D2EDC04A1CB107DB005A4481 /* Proposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC0491CB107DB005A4481 /* Proposer.swift */; };
 		D2EDC04C1CB10897005A4481 /* WLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC04B1CB10897005A4481 /* WLUserDefaults.swift */; };
@@ -768,6 +772,8 @@
 		D206FB561CB2836F00B2143F /* WLCornerBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLCornerBtn.swift; sourceTree = "<group>"; };
 		D206FB591CB2921800B2143F /* WLSendVerifyCodeControlelr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLSendVerifyCodeControlelr.swift; sourceTree = "<group>"; };
 		D206FB5C1CB2935100B2143F /* QZVerifyCodeBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZVerifyCodeBtn.swift; sourceTree = "<group>"; };
+		D21FB1941CC27EB7002BC2C0 /* UserKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserKeys.swift; sourceTree = "<group>"; };
+		D21FB1961CC28219002BC2C0 /* SigninupActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninupActivity.swift; sourceTree = "<group>"; };
 		D23D37B91CB0114700CE01B2 /* SuperTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23D37BC1CB0114700CE01B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23D37C11CB0114700CE01B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -828,10 +834,12 @@
 		D2A344E21CBD4FEC0052F3A6 /* WifiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiHelper.h; sourceTree = "<group>"; };
 		D2A344E31CBD4FEC0052F3A6 /* WifiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiHelper.m; sourceTree = "<group>"; };
 		D2A344E51CBD50540052F3A6 /* WLSingletonH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSingletonH.h; sourceTree = "<group>"; };
+		D2BE12E21CC1557A003737FB /* ChoseLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoseLocationViewController.swift; sourceTree = "<group>"; };
 		D2C9CC0A1CBEACF700A655C8 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		D2C9CC0D1CBEAD6F00A655C8 /* CompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		D2C9CC0F1CBEAD7F00A655C8 /* CompleteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompleteView.xib; sourceTree = "<group>"; };
 		D2C9CC111CBEAE6700A655C8 /* LoadFromNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFromNib.swift; sourceTree = "<group>"; };
+		D2E1DD6E1CC2500900C96116 /* ScanActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanActivityViewController.swift; sourceTree = "<group>"; };
 		D2EDC0461CB10561005A4481 /* WLAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLAlert.swift; sourceTree = "<group>"; };
 		D2EDC0491CB107DB005A4481 /* Proposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposer.swift; sourceTree = "<group>"; };
 		D2EDC04B1CB10897005A4481 /* WLUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLUserDefaults.swift; sourceTree = "<group>"; };
@@ -2136,13 +2144,23 @@
 		D2D259811CC0070A002FA695 /* ChoseLocViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D2BE12E21CC1557A003737FB /* ChoseLocationViewController.swift */,
 			);
 			name = ChoseLocViewController;
+			sourceTree = "<group>";
+		};
+		D2E1DD6D1CC24FF500C96116 /* ScanActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2E1DD6E1CC2500900C96116 /* ScanActivityViewController.swift */,
+			);
+			name = ScanActivityViewController;
 			sourceTree = "<group>";
 		};
 		D2EDC03C1CB103CA005A4481 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2E1DD6D1CC24FF500C96116 /* ScanActivityViewController */,
 				D2D259811CC0070A002FA695 /* ChoseLocViewController */,
 				D2FD50A31CBFEF2700A002D4 /* ChoseTimeSectionController */,
 				D2FD50A01CBFEEFC00A002D4 /* ChoseWifiViewController */,
@@ -2186,6 +2204,8 @@
 			children = (
 				D2EFD8521CBAA11400E531A4 /* Company.swift */,
 				D2A344DC1CBD38230052F3A6 /* Activity.swift */,
+				D21FB1941CC27EB7002BC2C0 /* UserKeys.swift */,
+				D21FB1961CC28219002BC2C0 /* SigninupActivity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -2554,6 +2574,7 @@
 			files = (
 				D206FAAB1CB2764400B2143F /* NSString+Emoji.m in Sources */,
 				D206FB481CB2764400B2143F /* UIWebView+Alert.m in Sources */,
+				D21FB1971CC28219002BC2C0 /* SigninupActivity.swift in Sources */,
 				D206FB251CB2764400B2143F /* UITextField+Select.m in Sources */,
 				D2EDC04C1CB10897005A4481 /* WLUserDefaults.swift in Sources */,
 				D206FAE81CB2764400B2143F /* UIDevice+PasscodeStatus.m in Sources */,
@@ -2644,9 +2665,11 @@
 				D2C9CC0E1CBEAD6F00A655C8 /* CompleteView.swift in Sources */,
 				D206FB191CB2764400B2143F /* UIScrollView+Pages.m in Sources */,
 				D206FB411CB2764400B2143F /* UIViewController+DDPopUpViewController.m in Sources */,
+				D2BE12E31CC1557A003737FB /* ChoseLocationViewController.swift in Sources */,
 				D206FB3E1CB2764400B2143F /* UIViewController+BackButtonItemTitle.m in Sources */,
 				D2EDC0521CB1163B005A4481 /* WLConfig.swift in Sources */,
 				D206FB051CB2764400B2143F /* UILabel+ESAdjustableLabel.m in Sources */,
+				D2E1DD6F1CC2500900C96116 /* ScanActivityViewController.swift in Sources */,
 				D206FAC31CB2764400B2143F /* MKMapView+BetterMaps.m in Sources */,
 				D2EDC0471CB10561005A4481 /* WLAlert.swift in Sources */,
 				D206F8501CB272AF00B2143F /* InitialFromStoryboard.swift in Sources */,
@@ -2658,6 +2681,7 @@
 				D206FAB41CB2764400B2143F /* NSString+Score.m in Sources */,
 				D206FB211CB2764400B2143F /* UITableViewCell+NIB.m in Sources */,
 				D2EFD85A1CBAB4F500E531A4 /* ImageBarButtonItem.swift in Sources */,
+				D21FB1951CC27EB7002BC2C0 /* UserKeys.swift in Sources */,
 				D206FA711CB2764400B2143F /* NSPersistentStoreCoordinator+Custom.m in Sources */,
 				D206FABE1CB2764400B2143F /* NSURLConnection+SelfSigned.m in Sources */,
 				D206FA9F1CB2764400B2143F /* NSObject+EasyCopy.m in Sources */,

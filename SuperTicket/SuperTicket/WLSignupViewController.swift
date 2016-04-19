@@ -19,6 +19,25 @@ class WLSignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI();
+        fetchData()
+    }
+    
+    private func fetchData() {
+        let query = SigninupActivity.query()
+        query.whereKey(k_userId, equalTo: AVUser.currentUser().objectId)
+        query.getFirstObjectInBackgroundWithBlock {[weak self] (obj, error) in
+            if let obj = obj as? SigninupActivity {
+                self?.fetchActivityData(obj)
+            }
+        }
+    }
+    
+    private func fetchActivityData(object: SigninupActivity) {
+        for actId in object.signInActivities {
+            let query = Activity.query()
+            query.whereKey("activityId", equalTo: actId)
+            query.
+        }
     }
     
     private func setupUI() {

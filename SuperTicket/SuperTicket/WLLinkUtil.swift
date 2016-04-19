@@ -90,8 +90,14 @@ class WLLinkUtil {
     }
     
     func linkToCreateActivityVc(send: UIViewController, company: Company) {
-        let vc = ActivityViewController.createFromStoryBoard("Activity", vcStroreId: "ActivityViewController") as! ActivityViewController
+        let vc = ActivityViewController.createFromStoryBoard(StoryBoardName.Activity.rawValue, vcStroreId: "ActivityViewController") as! ActivityViewController
         vc.company = company
+        send.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func linkToScanActivityVc(send: UIViewController, activity: Activity) {
+        let vc = ScanActivityViewController.createFromStoryBoard(StoryBoardName.Activity.rawValue, vcStroreId: "ScanActivityViewController") as! ScanActivityViewController
+        vc.activity = activity
         send.navigationController?.pushViewController(vc, animated: true)
     }
     

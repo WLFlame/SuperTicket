@@ -41,7 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Company.registerSubclass()
             SignInConfigure.registerSubclass()
             SignInTimeSection.registerSubclass()
+            SignInLocation.registerSubclass()
+            SigninupActivity.registerSubclass()
             Activity.registerSubclass()
+            
         }
         registerSubclass()
         

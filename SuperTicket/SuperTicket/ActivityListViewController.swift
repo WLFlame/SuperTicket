@@ -27,23 +27,40 @@ class ActivityListViewController: UITableViewController {
     }
     
     private func fetchData() {
-        let query = company.activities?.query()
-        query?.cachePolicy = .CacheThenNetwork
+//        let query = company.activities?.query()
+//        query?.cachePolicy = .CacheThenNetwork
+//        showHud()
+//        query?.findObjectsInBackgroundWithBlock({[weak self] (activities, error) in
+//            self?.hideHud()
+//            if let activities = activities as? [Activity] {
+//                if activities.count > 0 {
+//                    self?.activities = activities
+//                    self?.tableView.reloadData()
+//                } else {
+//                    self?.tableView.reloadEmptyDataSet()
+//                }
+//                
+//            } else {
+//                self?.tableView.reloadEmptyDataSet()
+//            }
+//        })
+        let query = Activity.query()
         showHud()
-        query?.findObjectsInBackgroundWithBlock({[weak self] (activities, error) in
+        query.whereKey("companyId", equalTo: company.companyId)
+        query.findObjectsInBackgroundWithBlock {[weak self] (activies, error) in
             self?.hideHud()
-            if let activities = activities as? [Activity] {
+            if let activities = activies as? [Activity] {
                 if activities.count > 0 {
                     self?.activities = activities
                     self?.tableView.reloadData()
                 } else {
                     self?.tableView.reloadEmptyDataSet()
                 }
-                
+
             } else {
                 self?.tableView.reloadEmptyDataSet()
             }
-        })
+        }
     }
     
     
@@ -64,6 +81,10 @@ extension ActivityListViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return activities.count
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        WLLinkUtil.sharedInstance.linkToScanActivityVc(self, activity: activities[indexPath.row])
     }
 }
 

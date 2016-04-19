@@ -34,6 +34,10 @@ class WLLoginViewController: UIViewController {
                     loginUser = LoginUser(accessToken: user.username, userID:  user.objectId, username: user.username, nickname: user.username, avatarURLString: "")
                 }
                 saveTokenAndUserInfoOfLoginUser(loginUser)
+                let signInAct = SigninupActivity()
+                signInAct.userId = AVUser.currentUser().objectId
+                signInAct.signInActivities = []
+                signInAct.saveInBackground()
                 WLLinkUtil.sharedInstance.linkToMainVc()
                 self?.hideHud()
             } else {

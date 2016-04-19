@@ -18,7 +18,6 @@
                     <connections>
                         <segue destination="ZHh-Ir-k4Q" kind="relationship" relationship="viewControllers" id="rEW-ac-Dci"/>
                         <segue destination="EMD-mE-oDc" kind="relationship" relationship="viewControllers" id="gDb-7n-08Y"/>
-                        <segue destination="EuB-KG-mee" kind="relationship" relationship="viewControllers" id="W6j-aZ-sL4"/>
                         <segue destination="P3A-Dx-eSe" kind="relationship" relationship="viewControllers" id="kZw-Gi-X3F"/>
                     </connections>
                 </tabBarController>
@@ -96,14 +95,19 @@
                                     <constraint firstItem="Wau-n7-yjp" firstAttribute="top" secondItem="0zZ-hJ-kkX" secondAttribute="top" constant="10" id="xMp-uj-aD9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:06 43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQZ-2d-UoS">
-                                <rect key="frame" x="264.5" y="72" width="70" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:06 43" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQZ-2d-UoS">
+                                <rect key="frame" x="10" y="72" width="580" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="WAo-fd-jIp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WAo-fd-jIp"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:30 - 19:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCd-Yr-B1D">
                                 <rect key="frame" x="248" y="102" width="103" height="20.5"/>
@@ -130,7 +134,9 @@
                             <constraint firstItem="jQZ-2d-UoS" firstAttribute="centerX" secondItem="Ks2-XA-sIg" secondAttribute="centerX" id="e1L-eV-90O"/>
                             <constraint firstItem="0zZ-hJ-kkX" firstAttribute="top" secondItem="5fK-QN-0mN" secondAttribute="bottom" id="ftR-kT-E0Q"/>
                             <constraint firstAttribute="trailing" secondItem="0zZ-hJ-kkX" secondAttribute="trailing" id="g6d-n2-GMA"/>
+                            <constraint firstAttribute="trailing" secondItem="jQZ-2d-UoS" secondAttribute="trailing" constant="10" id="gsq-Zg-gKb"/>
                             <constraint firstItem="5fK-QN-0mN" firstAttribute="leading" secondItem="Ks2-XA-sIg" secondAttribute="leading" id="mR8-XJ-zAe"/>
+                            <constraint firstItem="jQZ-2d-UoS" firstAttribute="leading" secondItem="Ks2-XA-sIg" secondAttribute="leading" constant="10" id="oLK-g8-kqT"/>
                             <constraint firstItem="0zZ-hJ-kkX" firstAttribute="leading" secondItem="Ks2-XA-sIg" secondAttribute="leading" id="oUK-Pi-77y"/>
                         </constraints>
                     </view>
