@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 class WLSignupViewController: UIViewController {
 
@@ -15,6 +14,17 @@ class WLSignupViewController: UIViewController {
     @IBOutlet weak var lbSubTime: UILabel!
     @IBOutlet weak var activityChoicePicker: UIPickerView!
     var timer: NSTimer!
+    var activities: [Activity] = []
+    var seletedRow = 0
+    
+    var seleteActivity: Activity? {
+        get {
+            if self.activities.count > 0 {
+                return self.activities[seletedRow]
+            }
+            return nil
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +36,11 @@ class WLSignupViewController: UIViewController {
         let query = SigninupActivity.query()
         query.whereKey(k_userId, equalTo: AVUser.currentUser().objectId)
         query.getFirstObjectInBackgroundWithBlock {[weak self] (obj, error) in
-            if let obj = obj as? SigninupActivity {
-                self?.fetchActivityData(obj)
+            if error == nil {
+                if let obj = obj as? SigninupActivity {
+                    debugPrint(obj.signInActivities)
+                    self?.fetchActivityData(obj)
+                }
             }
         }
     }
@@ -35,8 +48,17 @@ class WLSignupViewController: UIViewController {
     private func fetchActivityData(object: SigninupActivity) {
         for actId in object.signInActivities {
             let query = Activity.query()
-            query.whereKey("activityId", equalTo: actId)
-            query.
+            query.whereKey("activityId", equalTo: (actId as NSString).integerValue)
+            query.getFirstObjectInBackgroundWithBlock({[weak self] (obj, error) in
+                if error == nil {
+                    if let obj = obj as? Activity {
+                        debugPrint(obj)
+                        self?.activities.append(obj)
+                        self?.activityChoicePicker.reloadComponent(0)
+
+                    }
+                }
+            })
         }
     }
     
@@ -55,17 +77,22 @@ class WLSignupViewController: UIViewController {
 extension WLSignupViewController {
     // 活动说明
     @IBAction func actSummary(sender: AnyObject) {
-        
+        let explainVc = ActivityExplainController.createFromStoryBoard(StoryBoardName.Signup.rawValue, vcStroreId: "ActivityExplainController") as! ActivityExplainController
+        explainVc.activity = seleteActivity
+        navigationController?.pushViewController(explainVc, animated: true)
     }
     
     // 签到情况
     @IBAction func signupState(sender: AnyObject) {
-        
+        let stateVc = WLSignupStateController()
+        navigationController?.pushViewController(stateVc, animated: true)
     }
     
     // 本次活动任务
     @IBAction func actAssignment(sender: AnyObject) {
-        
+        let assignmentVc = WLActAssignmentController.createFromStoryBoard(StoryBoardName.Signup.rawValue, vcStroreId: "WLActAssignmentController") as! WLActAssignmentController
+        assignmentVc.activity = seleteActivity
+        navigationController?.pushViewController(assignmentVc, animated: true)
     }
     
     // 提交电子票
@@ -86,14 +113,21 @@ extension WLSignupViewController : UIPickerViewDataSource {
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 0
+        return self.activities.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let act = self.activities[row]
+        return act.nick
     }
 }
 
 // MARK: - UIPickerViewDelegate
 extension WLSignupViewController : UIPickerViewDelegate {
 
-    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        seletedRow = row
+    }
 }
 
 

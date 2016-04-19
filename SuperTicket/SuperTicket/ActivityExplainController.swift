@@ -1,31 +1,29 @@
 //
-//  WLActAssignmentController.swift
+//  QZActivityExplainController.swift
 //  SuperTicket
 //
-//  Created by wanli.yang on 16/4/3.
+//  Created by wanli.yang on 16/4/19.
 //  Copyright © 2016年 wanli.yang. All rights reserved.
 //
 
 import UIKit
 
-class WLActAssignmentController: UIViewController {
-    var activity: Activity!
-    
-    @IBOutlet weak var textView: UITextView!
+class ActivityExplainController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    var activity: Activity!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if textView == nil {
-            textView = UITextView()
-        }
+
         configureUI()
     }
     
+    
     private func configureUI() {
-        if let assignment = activity.assignment {
-            textView.text = activity.assignment
+        if let introduce = activity.introduce {
+            textView.text = activity.introduce
         } else {
-            textView.text = "还没有活动任务"
+            textView.text = "还没有活动介绍"
         }
         
         if activity.publisherId != AVUser.currentUser().objectId {
@@ -38,7 +36,7 @@ class WLActAssignmentController: UIViewController {
                 if self!.textView.text.isEmpty {
                     return
                 }
-                self!.activity.assignment = self!.textView.text
+                self!.activity.introduce = self!.textView.text
                 self!.showHud()
                 self!.activity.saveInBackgroundWithBlock({ (succeed, error) in
                     self!.hideHud()
@@ -50,9 +48,8 @@ class WLActAssignmentController: UIViewController {
                 })
                 })
         }
-       
+        
     }
+
     
 }
-
-

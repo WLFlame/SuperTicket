@@ -247,6 +247,9 @@
 		D23D37C21CB0114700CE01B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23D37C01CB0114700CE01B2 /* Main.storyboard */; };
 		D23D37C41CB0114700CE01B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23D37C31CB0114700CE01B2 /* Assets.xcassets */; };
 		D23D37C71CB0114700CE01B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23D37C51CB0114700CE01B2 /* LaunchScreen.storyboard */; };
+		D2696E561CC68BA400604885 /* ActivityExplainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2696E551CC68BA400604885 /* ActivityExplainController.swift */; };
+		D2696E591CC6930600604885 /* QZSignedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2696E581CC6930600604885 /* QZSignedTableViewController.swift */; };
+		D2696E5C1CC6932800604885 /* QZUnSignedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2696E5B1CC6932800604885 /* QZUnSignedTableViewController.swift */; };
 		D2A344801CBBFAD60052F3A6 /* TitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A3447F1CBBFAD60052F3A6 /* TitleBarButtonItem.swift */; };
 		D2A3448A1CBBFF760052F3A6 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344831CBBFF760052F3A6 /* TPKeyboardAvoidingCollectionView.m */; };
 		D2A3448B1CBBFF760052F3A6 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A344851CBBFF760052F3A6 /* TPKeyboardAvoidingScrollView.m */; };
@@ -780,6 +783,9 @@
 		D23D37C31CB0114700CE01B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D23D37C61CB0114700CE01B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D23D37C81CB0114700CE01B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2696E551CC68BA400604885 /* ActivityExplainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityExplainController.swift; sourceTree = "<group>"; };
+		D2696E581CC6930600604885 /* QZSignedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSignedTableViewController.swift; sourceTree = "<group>"; };
+		D2696E5B1CC6932800604885 /* QZUnSignedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZUnSignedTableViewController.swift; sourceTree = "<group>"; };
 		D2A3447F1CBBFAD60052F3A6 /* TitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleBarButtonItem.swift; sourceTree = "<group>"; };
 		D2A344821CBBFF760052F3A6 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		D2A344831CBBFF760052F3A6 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
@@ -1975,6 +1981,30 @@
 			path = SuperTicket;
 			sourceTree = "<group>";
 		};
+		D2696E541CC68B7D00604885 /* ActivityExplainController */ = {
+			isa = PBXGroup;
+			children = (
+				D2696E551CC68BA400604885 /* ActivityExplainController.swift */,
+			);
+			name = ActivityExplainController;
+			sourceTree = "<group>";
+		};
+		D2696E571CC692DF00604885 /* SignedTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2696E581CC6930600604885 /* QZSignedTableViewController.swift */,
+			);
+			name = SignedTableViewController;
+			sourceTree = "<group>";
+		};
+		D2696E5A1CC6931300604885 /* unSignedTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2696E5B1CC6932800604885 /* QZUnSignedTableViewController.swift */,
+			);
+			name = unSignedTableViewController;
+			sourceTree = "<group>";
+		};
 		D2A3447E1CBBFAB60052F3A6 /* TitleBarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -2160,6 +2190,9 @@
 		D2EDC03C1CB103CA005A4481 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2696E5A1CC6931300604885 /* unSignedTableViewController */,
+				D2696E571CC692DF00604885 /* SignedTableViewController */,
+				D2696E541CC68B7D00604885 /* ActivityExplainController */,
 				D2E1DD6D1CC24FF500C96116 /* ScanActivityViewController */,
 				D2D259811CC0070A002FA695 /* ChoseLocViewController */,
 				D2FD50A31CBFEF2700A002D4 /* ChoseTimeSectionController */,
@@ -2597,6 +2630,7 @@
 				D2A344D21CBC157B0052F3A6 /* MJRefreshConst.m in Sources */,
 				D206FB3B1CB2764400B2143F /* UIView+ViewController.m in Sources */,
 				D206FB291CB2764400B2143F /* UITextView+Select.m in Sources */,
+				D2696E561CC68BA400604885 /* ActivityExplainController.swift in Sources */,
 				D206FAED1CB2764400B2143F /* UIImage+animatedGIF.m in Sources */,
 				D206FB501CB2764400B2143F /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				D206FA6E1CB2764400B2143F /* NSManagedObjectContext+Fetching.m in Sources */,
@@ -2720,9 +2754,11 @@
 				D206FA861CB2764400B2143F /* NSDateFormatter+Make.m in Sources */,
 				D2EFD8571CBAB39600E531A4 /* UIViewController+EmptySet.swift in Sources */,
 				D2A344E01CBD49590052F3A6 /* ActivityViewController.swift in Sources */,
+				D2696E5C1CC6932800604885 /* QZUnSignedTableViewController.swift in Sources */,
 				D2A344C51CBC157B0052F3A6 /* MJRefreshComponent.m in Sources */,
 				D206FAFF1CB2764400B2143F /* UIImageView+FaceAwareFill.m in Sources */,
 				D206FB2D1CB2764400B2143F /* UIView+CustomBorder.m in Sources */,
+				D2696E591CC6930600604885 /* QZSignedTableViewController.swift in Sources */,
 				D206FAF31CB2764400B2143F /* UIImage+FX.m in Sources */,
 				D206FAB11CB2764400B2143F /* NSString+RegexCategory.m in Sources */,
 				D206FAE71CB2764400B2143F /* UIDevice+Hardware.m in Sources */,

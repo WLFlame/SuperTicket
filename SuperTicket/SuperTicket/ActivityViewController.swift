@@ -101,6 +101,7 @@ class ActivityViewController: UITableViewController {
         }
         
         activity.companyId = company.companyId
+        activity.publisherId = AVUser.currentUser().objectId
         debugPrint(company.companyId)
         showHud()
         
