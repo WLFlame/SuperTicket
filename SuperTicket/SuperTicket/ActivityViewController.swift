@@ -113,6 +113,11 @@ class ActivityViewController: UITableViewController {
                 WLAlert.alertSorry(message: "保存失败", inViewController: self!)
             }
         }
+        
+        // 将该活动添加到活动出勤表
+        let signState = ActivtySignStateUsers()
+        signState.activityId = activity.activityId
+        signState.saveInBackground()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

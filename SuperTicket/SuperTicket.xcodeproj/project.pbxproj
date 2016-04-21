@@ -317,6 +317,7 @@
 		D2FD50A21CBFEF1D00A002D4 /* ChoseWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD50A11CBFEF1D00A002D4 /* ChoseWifiViewController.swift */; };
 		D2FD50A51CBFF05800A002D4 /* ChoseTimeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD50A41CBFF05800A002D4 /* ChoseTimeSectionController.swift */; };
 		F6270DC61CBCDBF00086AEE2 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6270DC51CBCDBF00086AEE2 /* CompanyDetailViewController.swift */; };
+		F68775951CC87271003802DD /* ActivtySignStateUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68775941CC87271003802DD /* ActivtySignStateUsers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -881,6 +882,7 @@
 		D2FD50A41CBFF05800A002D4 /* ChoseTimeSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoseTimeSectionController.swift; sourceTree = "<group>"; };
 		ED3F7024A8D13E5FCB6C924D /* Pods-SuperTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperTicket/Pods-SuperTicket.debug.xcconfig"; sourceTree = "<group>"; };
 		F6270DC51CBCDBF00086AEE2 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
+		F68775941CC87271003802DD /* ActivtySignStateUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivtySignStateUsers.swift; sourceTree = "<group>"; };
 		F7D0D304EDA08742C81DD1C3 /* Pods_SuperTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -2239,6 +2241,7 @@
 				D2A344DC1CBD38230052F3A6 /* Activity.swift */,
 				D21FB1941CC27EB7002BC2C0 /* UserKeys.swift */,
 				D21FB1961CC28219002BC2C0 /* SigninupActivity.swift */,
+				F68775941CC87271003802DD /* ActivtySignStateUsers.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -2853,6 +2856,7 @@
 				D206FAF21CB2764400B2143F /* UIImage+FileName.m in Sources */,
 				D23D37BD1CB0114700CE01B2 /* AppDelegate.swift in Sources */,
 				D206FB321CB2764400B2143F /* UIView+Frame.m in Sources */,
+				F68775951CC87271003802DD /* ActivtySignStateUsers.swift in Sources */,
 				D2EDC05A1CB13A07005A4481 /* WLNavigationController.swift in Sources */,
 				D206FAEE1CB2764400B2143F /* UIImage+BetterFace.m in Sources */,
 				D206FABD1CB2764400B2143F /* NSURL+QueryDictionary.m in Sources */,

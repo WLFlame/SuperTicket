@@ -52,10 +52,26 @@ class ScanActivityViewController: UITableViewController {
                 self?.btnAction.setTitle("已报名", forState: .Normal)
                 self?.btnAction.enabled = false
                 self?.lbHasSignupCount.text = "已报名人数:\(self!.activity.signupCount.integerValue + 1)人"
+                
+                // 将该用户添加到活动出勤表中
+                let queryState = ActivtySignStateUsers.query()
+                queryState.whereKey(k_ActivityId, equalTo: self!.activity.activityId)
+                queryState.getFirstObjectInBackgroundWithBlock { (obj, error) in
+                    if error == nil {
+                        if let obj = obj as? ActivtySignStateUsers {
+                            obj.notSignupUsers.append(AVUser.currentUser())
+                            obj.saveInBackground()
+                        }
+                    }
+                }
+                
             } else {
                 WLAlert.alertSorry(message: "报名失败", inViewController: self!)
             }
         }
+        
+       
+        
     }
     
     private func configureUI() {

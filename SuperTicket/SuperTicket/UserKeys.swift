@@ -9,3 +9,4 @@
 import Foundation
 
 let k_SignupInActivites = "signInActivities"
+let k_ActivityId = "activityId"
